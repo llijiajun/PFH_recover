@@ -1,0 +1,186 @@
+{
+  "functionals": {
+    "eb_fit": {
+      "entropy": 0.029436071337815277,
+      "ndv": 0.09698128668826,
+      "rare_frac": 3.486625651527575e-07,
+      "self_join": 0.20064322082296898
+    },
+    "gain_entropy_naive_over_ours_fitted": 8.465257957353291,
+    "gain_self_join_naive_over_ours_fitted": 12.475755422415242,
+    "good_turing": {
+      "entropy": 0.2667222674218938,
+      "ndv": 1.0,
+      "rare_frac": 0.0,
+      "self_join": 0.9986946688102172
+    },
+    "naive": {
+      "entropy": 0.2491839371256599,
+      "ndv": 0.7038352272727273,
+      "rare_frac": 0.026666666666666616,
+      "self_join": 2.503175750153014
+    },
+    "npmle": {
+      "entropy": 0.062034054978376836,
+      "ndv": 0.2419111153848587,
+      "rare_frac": 0.0005190990683574388,
+      "self_join": 0.8406424295869359
+    },
+    "ours": {
+      "entropy": 0.02917306843930475,
+      "ndv": 0.06701250298239345,
+      "rare_frac": 0.0,
+      "self_join": 0.16666666666666674
+    },
+    "smooth_bayes": {
+      "entropy": 0.02860236955788231,
+      "ndv": 0.09698128668776852,
+      "rare_frac": 0.0,
+      "self_join": 0.2698850266732701
+    },
+    "svd": {
+      "entropy": 0.08074437958603367,
+      "ndv": 0.2942354730925951,
+      "rare_frac": 0.42017500000003605,
+      "self_join": 20.703353241765708
+    }
+  },
+  "n_cases": 276,
+  "ndv": {
+    "coverage": {
+      "finite_cases": 141,
+      "mean": 2.7999798318384204,
+      "median": 0.8680427695478117,
+      "within10": 0.0070921985815602835
+    },
+    "eb_fit": {
+      "finite_cases": 276,
+      "mean": 0.23428882551316374,
+      "median": 0.09698128668826,
+      "within10": 0.5108695652173914
+    },
+    "jack1": {
+      "finite_cases": 276,
+      "mean": 0.5010763189541808,
+      "median": 0.4619013062409289,
+      "within10": 0.18478260869565216
+    },
+    "jack2": {
+      "finite_cases": 276,
+      "mean": 0.4822074564960667,
+      "median": 0.4258761036616379,
+      "within10": 0.10869565217391304
+    },
+    "npmle": {
+      "finite_cases": 276,
+      "mean": 0.36507844121036714,
+      "median": 0.24191111538485877,
+      "within10": 0.322463768115942
+    },
+    "ours": {
+      "finite_cases": 276,
+      "mean": 0.21145246850352084,
+      "median": 0.06701250298239345,
+      "within10": 0.5942028985507246
+    },
+    "poly": {
+      "finite_cases": 140,
+      "mean": 1.0643221323170822,
+      "median": 0.5478456213290956,
+      "within10": 0.09285714285714286
+    },
+    "sgt": {
+      "finite_cases": 275,
+      "mean": 0.4072066792583807,
+      "median": 0.26543000000000005,
+      "within10": 0.2581818181818182
+    },
+    "smooth_bayes": {
+      "finite_cases": 276,
+      "mean": 0.23428883300172346,
+      "median": 0.09698128668776852,
+      "within10": 0.5108695652173914
+    }
+  },
+  "paired_tests": {
+    "entropy_ours_fitted_vs_raw": {
+      "mean_a": 0.07968577345799988,
+      "mean_b": 0.2991692791368179,
+      "median_a": 0.029436071337815277,
+      "median_b": 0.2491839371256599,
+      "n_pairs": 275,
+      "wilcoxon_p": 4.366408520307845e-45,
+      "win_rate_a_less_b": 0.9345454545454546
+    },
+    "self_join_ours_fitted_vs_raw": {
+      "mean_a": 1.6520269686073576,
+      "mean_b": 4.333615903484231,
+      "median_a": 0.20064322082296898,
+      "median_b": 2.503175750153014,
+      "n_pairs": 276,
+      "wilcoxon_p": 2.397421441455581e-45,
+      "win_rate_a_less_b": 0.9456521739130435
+    },
+    "self_join_ours_fitted_vs_sb_linear": {
+      "mean_a": 1.6520269686073576,
+      "mean_b": 1.6812304536310607,
+      "median_a": 0.20064322082296898,
+      "median_b": 0.2698850266732701,
+      "n_pairs": 276,
+      "wilcoxon_p": 0.098639390335862,
+      "win_rate_a_less_b": 0.5253623188405797
+    },
+    "w1_ours_fitted_vs_sb_linear": {
+      "mean_a": 6.3248791734887035,
+      "mean_b": 6.252632244848654,
+      "median_a": 0.025250310672515486,
+      "median_b": 0.044778634681253204,
+      "n_pairs": 275,
+      "wilcoxon_p": 0.9958135533435286,
+      "win_rate_a_less_b": 0.3490909090909091
+    }
+  },
+  "sb_equals_ours_fitted_ndv": {
+    "max_abs_diff": 2.0667282538966436e-06,
+    "n_pairs": 276
+  },
+  "source": "modern_metrics.csv",
+  "spectrum_w1": {
+    "eb_fit": {
+      "finite_cases": 275,
+      "mean": 6.3248791734887035,
+      "median": 0.025250310672515486
+    },
+    "good_turing": {
+      "finite_cases": 269,
+      "mean": 4.617385065851098,
+      "median": 0.05188679245283012
+    },
+    "naive": {
+      "finite_cases": 275,
+      "mean": 13.379988197445389,
+      "median": 4.0
+    },
+    "npmle": {
+      "finite_cases": 275,
+      "mean": 7.057485680500335,
+      "median": 0.6450736877190358
+    },
+    "ours": {
+      "finite_cases": 275,
+      "mean": 5.714484629528986,
+      "median": 0.001334800068381159
+    },
+    "ratio_sb_over_ours_fitted": 1.7733894549659523,
+    "smooth_bayes": {
+      "finite_cases": 275,
+      "mean": 6.252632244848654,
+      "median": 0.044778634681253204
+    },
+    "svd": {
+      "finite_cases": 275,
+      "mean": 11.977417432059505,
+      "median": 6.801049816022238
+    }
+  }
+}

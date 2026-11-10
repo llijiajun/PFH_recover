@@ -1,0 +1,260 @@
+{
+  "selector": {
+    "rule": "report the point histogram only when fitted a0 > 1e-3",
+    "computed_from": "the thinned sample alone, via fitted_prior_eb",
+    "threshold_origin": "the lower bound of the optimizer for a0, not a tuned constant and not chosen using ground truth or test error",
+    "flagged_case_semantics": "no point histogram is returned, a boundary flag is returned instead"
+  },
+  "coverage": {
+    "n_cases": 276,
+    "n_kept": 231,
+    "n_refused": 45,
+    "usable_fraction": 0.8369565217391305
+  },
+  "error_by_group": {
+    "kept": {
+      "eb_fit_w1": 0.009456102131983668,
+      "smooth_bayes_w1": 0.02137711670529252,
+      "good_turing_w1": 0.032258064516129004,
+      "naive_w1": 3.9731747411788847
+    },
+    "refused": {
+      "eb_fit_w1": 11.255411111693832,
+      "smooth_bayes_w1": 9.94237865394879,
+      "good_turing_w1": 14.707859848484949,
+      "naive_w1": 38.99251318444733
+    }
+  },
+  "large_error_audit": {
+    "definition": "W1 > 0.1, fixed before inspecting the kept group and about ten times its fitted median",
+    "n_large_kept": 39,
+    "n_large_refused": 45,
+    "fraction_of_large_errors_not_flagged": 0.4642857142857143
+  },
+  "same_kept_set_baselines": {
+    "n": 231,
+    "median_w1": {
+      "eb_fit_w1": 0.009456102131983668,
+      "smooth_bayes_w1": 0.02137711670529252,
+      "good_turing_w1": 0.032258064516129004,
+      "naive_w1": 3.9731747411788847
+    },
+    "fitted_vs_smooth_bayes_w1": {
+      "n": 230,
+      "win_rate_fitted_lower": 0.391304347826087,
+      "cluster_ci95": [
+        0.28819463229895276,
+        0.4978165938864629
+      ],
+      "wilcoxon_p_two_sided": 0.7641614934585262,
+      "median_diff": 9.984035877896869e-05
+    },
+    "fitted_vs_good_turing_w1": {
+      "n": 224,
+      "win_rate_fitted_lower": 0.4419642857142857,
+      "cluster_ci95": [
+        0.3303954924480806,
+        0.5517282042940794
+      ],
+      "wilcoxon_p_two_sided": 0.05168147134480868,
+      "median_diff": 9.984035872212527e-05
+    },
+    "fitted_vs_naive_w1": {
+      "n": 230,
+      "win_rate_fitted_lower": 1.0,
+      "cluster_ci95": [
+        1.0,
+        1.0
+      ],
+      "wilcoxon_p_two_sided": 1.666535575406526e-39,
+      "median_diff": -3.9294187919065067
+    }
+  },
+  "held_out_by_attribute": {
+    "n_attributes": 61,
+    "split_rule": "deterministic hash of the attribute name",
+    "split_0": {
+      "n": 115,
+      "median_w1": {
+        "eb_fit_w1": 0.008376106824266594,
+        "smooth_bayes_w1": 0.022396597319563782,
+        "good_turing_w1": 0.03943661971830981,
+        "naive_w1": 3.96056338028169
+      },
+      "fitted_vs_smooth_bayes_w1": {
+        "n": 115,
+        "win_rate_fitted_lower": 0.3391304347826087,
+        "cluster_ci95": [
+          0.20353982300884957,
+          0.47748744319540787
+        ],
+        "wilcoxon_p_two_sided": 0.2454455985311278,
+        "median_diff": 0.0002312643987341101
+      },
+      "fitted_vs_good_turing_w1": {
+        "n": 113,
+        "win_rate_fitted_lower": 0.415929203539823,
+        "cluster_ci95": [
+          0.25663716814159293,
+          0.576601817334576
+        ],
+        "wilcoxon_p_two_sided": 0.2935509143847149,
+        "median_diff": 9.984035872212527e-05
+      },
+      "fitted_vs_naive_w1": {
+        "n": 115,
+        "win_rate_fitted_lower": 1.0,
+        "cluster_ci95": [
+          1.0,
+          1.0
+        ],
+        "wilcoxon_p_two_sided": 1.2683631510628366e-20,
+        "median_diff": -3.8982970893988034
+      }
+    },
+    "split_1": {
+      "n": 116,
+      "median_w1": {
+        "eb_fit_w1": 0.010607966976430405,
+        "smooth_bayes_w1": 0.02035763609102126,
+        "good_turing_w1": 0.032258064516129004,
+        "naive_w1": 3.9815592597454286
+      },
+      "fitted_vs_smooth_bayes_w1": {
+        "n": 115,
+        "win_rate_fitted_lower": 0.4434782608695652,
+        "cluster_ci95": [
+          0.28179027113237637,
+          0.603448275862069
+        ],
+        "wilcoxon_p_two_sided": 0.10973796452250649,
+        "median_diff": 9.984035877896869e-05
+      },
+      "fitted_vs_good_turing_w1": {
+        "n": 111,
+        "win_rate_fitted_lower": 0.46846846846846846,
+        "cluster_ci95": [
+          0.30275229357798167,
+          0.6306543385490755
+        ],
+        "wilcoxon_p_two_sided": 0.0917719390762334,
+        "median_diff": 9.984035872212527e-05
+      },
+      "fitted_vs_naive_w1": {
+        "n": 115,
+        "win_rate_fitted_lower": 1.0,
+        "cluster_ci95": [
+          1.0,
+          1.0
+        ],
+        "wilcoxon_p_two_sided": 1.2938476004457517e-20,
+        "median_diff": -3.9633983458059823
+      }
+    }
+  },
+  "cost": {
+    "p": 0.3,
+    "repeats": 4,
+    "draws": 120,
+    "cases": [
+      {
+        "dataset": "NCVoter",
+        "attribute": "county_commiss_desc.csv",
+        "d_obs": 44,
+        "n_sample": 44
+      },
+      {
+        "dataset": "kasandr",
+        "attribute": "userid.csv",
+        "d_obs": 1690,
+        "n_sample": 87148
+      }
+    ],
+    "measurements": [
+      {
+        "Naive $1/p$": {
+          "ms_median": 0.0316037330776453,
+          "mb_peak": 0.009307861328125
+        },
+        "Good--Turing": {
+          "ms_median": 0.012916512787342072,
+          "mb_peak": 0.008392333984375
+        },
+        "SVD deconvolution": {
+          "ms_median": 186.73131265677512,
+          "mb_peak": 4.033928871154785
+        },
+        "Chebyshev": {
+          "ms_median": 0.007146038115024567,
+          "mb_peak": 0.004189491271972656
+        },
+        "NPMLE prior fit": {
+          "ms_median": 15.742749907076359,
+          "mb_peak": 0.1418914794921875
+        },
+        "NPMLE spectrum": {
+          "ms_median": 0.12256251648068428,
+          "mb_peak": 0.07891178131103516
+        },
+        "SB linear": {
+          "ms_median": 0.15677115879952908,
+          "mb_peak": 0.0102081298828125
+        },
+        "EB prior fit": {
+          "ms_median": 24.78222898207605,
+          "mb_peak": 0.056494712829589844
+        },
+        "Ours, spectrum": {
+          "ms_median": 4.489208338782191,
+          "mb_peak": 0.053269386291503906
+        },
+        "Ours, $120$-draw band": {
+          "ms_median": 18.444791436195374,
+          "mb_peak": 0.35279369354248047
+        }
+      },
+      {
+        "Naive $1/p$": {
+          "ms_median": 0.027437694370746613,
+          "mb_peak": 0.03957366943359375
+        },
+        "Good--Turing": {
+          "ms_median": 0.406396109610796,
+          "mb_peak": 0.00844573974609375
+        },
+        "SVD deconvolution": {
+          "ms_median": 350.55985394865274,
+          "mb_peak": 6.02980899810791
+        },
+        "Chebyshev": {
+          "ms_median": 1.1042915284633636,
+          "mb_peak": 0.4195137023925781
+        },
+        "NPMLE prior fit": {
+          "ms_median": 724.8002705164254,
+          "mb_peak": 24.770034790039062
+        },
+        "NPMLE spectrum": {
+          "ms_median": 6.5836666617542505,
+          "mb_peak": 12.069769859313965
+        },
+        "SB linear": {
+          "ms_median": 0.11595804244279861,
+          "mb_peak": 0.065155029296875
+        },
+        "EB prior fit": {
+          "ms_median": 1590.7062501646578,
+          "mb_peak": 31.487781524658203
+        },
+        "Ours, spectrum": {
+          "ms_median": 1485.8452705666423,
+          "mb_peak": 13.35662841796875
+        },
+        "Ours, $120$-draw band": {
+          "ms_median": 1013.2344579324126,
+          "mb_peak": 367.96263790130615
+        }
+      }
+    ]
+  }
+}

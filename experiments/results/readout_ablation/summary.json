@@ -1,0 +1,31 @@
+{
+  "paired_readout_test": {
+    "source": "experiments/results/baseline_validation/w1_tests.json",
+    "n_cases": 275,
+    "win_rate_full_posterior_readout": 0.3491,
+    "wilcoxon_p": 0.008373,
+    "median_w1_fitted": 0.02525,
+    "median_w1_rounded": 0.04478,
+    "note": "Both rows share one fitted prior and one truncation. The test therefore compares the two readouts."
+  },
+  "boundary_diagnostic": {
+    "source_real": "experiments/results/fitted_prior_validation/fitted_metrics.csv",
+    "source_spectra": "experiments/results/modern_baselines/modern_metrics.csv",
+    "a0_bound": 0.001,
+    "n_boundary": 45,
+    "n_interior": 231,
+    "eb_w1_median_boundary": 9.263289328168057,
+    "eb_w1_median_interior": 0.009456102131941035,
+    "median_w1_by_estimator_boundary": {
+      "eb_fit_w1": 11.255411111693832,
+      "smooth_bayes_w1": 9.94237865394879,
+      "good_turing_w1": 14.707859848484949,
+      "naive_w1": 38.99251318444733
+    },
+    "per_case_best_count_boundary": {
+      "good_turing_w1": 20,
+      "smooth_bayes_w1": 16,
+      "eb_fit_w1": 9
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "p": 0.3,
+  "repeats": 4,
+  "draws": 120,
+  "cases": [
+    {
+      "dataset": "NCVoter",
+      "attribute": "county_commiss_desc.csv",
+      "d_obs": 44,
+      "n_sample": 44
+    },
+    {
+      "dataset": "kasandr",
+      "attribute": "userid.csv",
+      "d_obs": 1690,
+      "n_sample": 87148
+    }
+  ],
+  "measurements": [
+    {
+      "Naive $1/p$": {
+        "ms_median": 0.0316037330776453,
+        "mb_peak": 0.009307861328125
+      },
+      "Good--Turing": {
+        "ms_median": 0.012916512787342072,
+        "mb_peak": 0.008392333984375
+      },
+      "SVD deconvolution": {
+        "ms_median": 186.73131265677512,
+        "mb_peak": 4.033928871154785
+      },
+      "Chebyshev": {
+        "ms_median": 0.007146038115024567,
+        "mb_peak": 0.004189491271972656
+      },
+      "NPMLE prior fit": {
+        "ms_median": 15.742749907076359,
+        "mb_peak": 0.1418914794921875
+      },
+      "NPMLE spectrum": {
+        "ms_median": 0.12256251648068428,
+        "mb_peak": 0.07891178131103516
+      },
+      "SB linear": {
+        "ms_median": 0.15677115879952908,
+        "mb_peak": 0.0102081298828125
+      },
+      "EB prior fit": {
+        "ms_median": 24.78222898207605,
+        "mb_peak": 0.056494712829589844
+      },
+      "Ours, spectrum": {
+        "ms_median": 4.489208338782191,
+        "mb_peak": 0.053269386291503906
+      },
+      "Ours, $120$-draw band": {
+        "ms_median": 18.444791436195374,
+        "mb_peak": 0.35279369354248047
+      }
+    },
+    {
+      "Naive $1/p$": {
+        "ms_median": 0.027437694370746613,
+        "mb_peak": 0.03957366943359375
+      },
+      "Good--Turing": {
+        "ms_median": 0.406396109610796,
+        "mb_peak": 0.00844573974609375
+      },
+      "SVD deconvolution": {
+        "ms_median": 350.55985394865274,
+        "mb_peak": 6.02980899810791
+      },
+      "Chebyshev": {
+        "ms_median": 1.1042915284633636,
+        "mb_peak": 0.4195137023925781
+      },
+      "NPMLE prior fit": {
+        "ms_median": 724.8002705164254,
+        "mb_peak": 24.770034790039062
+      },
+      "NPMLE spectrum": {
+        "ms_median": 6.5836666617542505,
+        "mb_peak": 12.069769859313965
+      },
+      "SB linear": {
+        "ms_median": 0.11595804244279861,
+        "mb_peak": 0.065155029296875
+      },
+      "EB prior fit": {
+        "ms_median": 1590.7062501646578,
+        "mb_peak": 31.487781524658203
+      },
+      "Ours, spectrum": {
+        "ms_median": 1485.8452705666423,
+        "mb_peak": 13.35662841796875
+      },
+      "Ours, $120$-draw band": {
+        "ms_median": 1013.2344579324126,
+        "mb_peak": 367.96263790130615
+      }
+    }
+  ]
+}

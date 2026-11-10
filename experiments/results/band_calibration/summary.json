@@ -1,0 +1,58 @@
+{
+  "output": "90% per-frequency credible band from K=120 posterior draws",
+  "source": "results/thickening-plausible-set-validation/intervals_three_layer.json",
+  "seeds": [
+    "seed0",
+    "seed1",
+    "seed2"
+  ],
+  "K120": {
+    "per_seed_coverage": [
+      0.9290540540540541,
+      0.9359430604982206,
+      0.9125874125874126
+    ],
+    "coverage_range": [
+      0.9125874125874126,
+      0.9359430604982206
+    ],
+    "coverage_median": 0.9290540540540541,
+    "median_band_width_per_seed": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "n_frequency_bins_per_seed": [
+      296,
+      281,
+      286
+    ]
+  },
+  "draw_count_stability": {
+    "120": {
+      "coverage_range": [
+        0.9125874125874126,
+        0.9359430604982206
+      ],
+      "median_width": 1.0
+    },
+    "500": {
+      "coverage_range": [
+        0.9190140845070423,
+        0.927797833935018
+      ],
+      "median_width": 1.0
+    },
+    "2000": {
+      "coverage_range": [
+        0.9234234234234234,
+        0.9354838709677419
+      ],
+      "median_width": 1.0
+    }
+  },
+  "prior_refitting": "The prior is fitted once per case and passed as a fixed array to plausible_set. The K posterior draws do not refit it, and repeated thinnings in this benchmark do not refit it either.",
+  "uncertainty_included": "posterior sampling variability of the population counts conditional on the fitted prior",
+  "uncertainty_excluded": "prior parameter estimation error, prior misspecification, and the unknown abundance of types absent from the sample",
+  "distinct_output": "The 95% per-type intervals and the L1 model-content figure of 0.953 are different quantities and do not validate this band."
+}

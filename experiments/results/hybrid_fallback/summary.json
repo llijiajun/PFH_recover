@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "modern_metrics": "experiments/results/modern_baselines/modern_metrics.csv",
+    "fitted_metrics": "experiments/results/fitted_prior_validation/fitted_metrics.csv",
+    "data_dependency": "experiments/results/data_dependency/summary.json"
+  },
+  "selector": {
+    "rule": "flag when fitted a0 <= 1.001e-3 (optimizer lower bound 1e-3)",
+    "computed_from": "the thinned sample alone, no ground truth"
+  },
+  "strategies": {
+    "fitted_always": {
+      "median_w1_all": 0.025250310672543907
+    },
+    "hybrid_fitted_good_turing": {
+      "median_w1_all": 0.025250310672543907,
+      "median_w1_flagged": 14.707859848484949,
+      "median_w1_reported": 0.009456102131983668,
+      "flagged_cases_improved": 21,
+      "flagged_cases_n": 45,
+      "paired_wilcoxon_p_two_sided": 0.7121622375975676,
+      "paired_median_diff_fitted_minus_fallback": -0.5420745061886514
+    },
+    "hybrid_fitted_smoothed_bayesian": {
+      "median_w1_all": 0.025250310672543907,
+      "median_w1_flagged": 9.94237865394879,
+      "median_w1_reported": 0.009456102131983668,
+      "flagged_cases_improved": 34,
+      "flagged_cases_n": 45,
+      "paired_wilcoxon_p_two_sided": 2.754650267888792e-07,
+      "paired_median_diff_fitted_minus_fallback": 0.32038681830731974
+    },
+    "hybrid_fitted_naive": {
+      "median_w1_all": 0.025250310672543907,
+      "median_w1_flagged": 38.99251318444733,
+      "median_w1_reported": 0.009456102131983668,
+      "flagged_cases_improved": 0,
+      "flagged_cases_n": 45,
+      "paired_wilcoxon_p_two_sided": 5.684341886080802e-14,
+      "paired_median_diff_fitted_minus_fallback": -21.029891637269472
+    },
+    "good_turing_always": {
+      "median_w1_all": 0.05188679245283012
+    },
+    "smoothed_bayesian_always": {
+      "median_w1_all": 0.044778634681253204
+    },
+    "refusal_policy": {
+      "rule": "return the point histogram only when a0 > 1e-3",
+      "n_reported": 231,
+      "n_flagged": 45,
+      "median_w1_reported": 0.009456102131983668,
+      "flagged_group_returns": "boundary flag and no point histogram"
+    },
+    "groups": {
+      "n_cases": 276,
+      "flagged_median_by_estimator": {
+        "fitted": 11.255411111693832,
+        "good_turing": 14.707859848484949,
+        "smoothed_bayesian": 9.94237865394879,
+        "naive": 38.99251318444733
+      },
+      "reported_median_by_estimator": {
+        "fitted": 0.009456102131983668,
+        "good_turing": 0.032258064516129004,
+        "smoothed_bayesian": 0.02137711670529252,
+        "naive": 3.9731747411788847
+      }
+    }
+  },
+  "table_iv_heavy_tails": {
+    "concentrated": {
+      "ratio_ours_over_gt": {
+        "0.05": 0.8518358095544357,
+        "0.1": 1.1685517466917816,
+        "0.2": 1.2233094594981446,
+        "0.3": 1.1685574140646922
+      },
+      "gt_better_at_all_rates": false,
+      "lowest_rate_ratio": 0.8518358095544357
+    },
+    "geopoor": {
+      "ratio_ours_over_gt": {
+        "0.05": 1.2887138593025476,
+        "0.1": 1.4753986162097714,
+        "0.2": 1.459403573603853,
+        "0.3": 1.292069563210961
+      },
+      "gt_better_at_all_rates": true,
+      "lowest_rate_ratio": 1.2887138593025476
+    },
+    "mix": {
+      "ratio_ours_over_gt": {
+        "0.05": 1.262065776226101,
+        "0.1": 0.8070490029432552,
+        "0.2": 0.4922292594602596,
+        "0.3": 0.26651530557388314
+      },
+      "gt_better_at_all_rates": false,
+      "lowest_rate_ratio": 1.262065776226101
+    },
+    "spiked": {
+      "ratio_ours_over_gt": {
+        "0.05": 0.9913481392845724,
+        "0.1": 0.7965037146775692,
+        "0.2": 0.4726212595159965,
+        "0.3": 0.1613975851656478
+      },
+      "gt_better_at_all_rates": false,
+      "lowest_rate_ratio": 0.9913481392845724
+    },
+    "zipf": {
+      "ratio_ours_over_gt": {
+        "0.05": 1.5794311244601902,
+        "0.1": 0.6186714006961755,
+        "0.2": 0.32351202407461027,
+        "0.3": 0.1524031459568495
+      },
+      "gt_better_at_all_rates": false,
+      "lowest_rate_ratio": 1.5794311244601902
+    }
+  }
+}

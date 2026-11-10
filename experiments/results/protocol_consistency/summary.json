@@ -1,0 +1,44 @@
+{
+  "finding": "The two numbers come from different protocols and must not be compared as repeated measurements of one quantity.",
+  "protocol_A": {
+    "where": "tables/tab_main.tex and tables/tab_necessity.tex, raw or no-thickening row at alpha=1.5, p=0.1",
+    "value": "2.51 +/- 0.04",
+    "definition": "network ablation grid, corrected protocol with the schedule forced to p_T=1 and the exp-1 readout, three seeds over 24 evaluation populations, distance aggregated by that grid",
+    "populations": "the network grid evaluation populations and its own seeds"
+  },
+  "protocol_B": {
+    "where": "sections/experiments.tex, mechanism paragraph",
+    "value": "0.64",
+    "definition": "independent analytic diagnostic grid from analyze_table2_mechanism.py, three seeds, N=1e5, vocab=3e4, j<=512, truth spectrum restricted to f<=J, W1 on the renormalized CDF",
+    "populations": "seed 710000 + 13*seed + 1000*p + 100*alpha, regenerated inside that script, not the network grid populations"
+  },
+  "reconciliation_on_same_populations": [
+    {
+      "seed": 0,
+      "d_obs": 624,
+      "w1_analytic_grid": 0.711411026641341,
+      "w1_folded_truth_metric": 0.711411026641341,
+      "n_true_f_gt_J": 18
+    },
+    {
+      "seed": 1,
+      "d_obs": 604,
+      "w1_analytic_grid": 0.6372372443000487,
+      "w1_folded_truth_metric": 0.6372372443000487,
+      "n_true_f_gt_J": 18
+    },
+    {
+      "seed": 2,
+      "d_obs": 636,
+      "w1_analytic_grid": 0.572446577115953,
+      "w1_folded_truth_metric": 0.572446577115953,
+      "n_true_f_gt_J": 18
+    }
+  ],
+  "action": [
+    "Remove the claim that the controlled run uses the same populations as Table II.",
+    "Label 0.64 explicitly as the analytic diagnostic grid.",
+    "State that 2.51 and 0.64 are not comparable and use each only inside its own protocol.",
+    "Correct the analyze_table2_mechanism.py docstring, which wrongly says the script measures mechanisms on the same populations as Table II."
+  ]
+}

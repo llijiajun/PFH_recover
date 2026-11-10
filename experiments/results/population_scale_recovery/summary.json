@@ -1,0 +1,163 @@
+{
+  "protocol": {
+    "question": "evaluation range of population-scale recovery",
+    "source": "experiments/results/readout_2x2/metrics.csv (276 cases)",
+    "cross_check_source": "experiments/results/modern_baselines/modern_metrics.csv",
+    "support": "j<=512 truncated spectrum",
+    "true_types_definition": "sum of F_j on j<=512, not the full number of distinct values V",
+    "true_mass_definition": "sum of j*F_j on j<=512, not the full row count N",
+    "truth_row_mass_median": 268.0,
+    "truth_type_count_median": 124.0,
+    "object_isolation": "These two quantities are not validated by W1, TV, or any per-frequency band coverage result, and they are not estimates of the full population size."
+  },
+  "arms": {
+    "B1": {
+      "type_count_signed_relerr": {
+        "n": 276,
+        "median": -0.019661059534943456,
+        "p25": -0.11971646942834623,
+        "p75": 0.06503068470932068,
+        "p90": 0.2896345615342238,
+        "mean": 0.03961314218586557
+      },
+      "type_count_abs_relerr": {
+        "n": 276,
+        "median": 0.09792243021451078,
+        "p25": 0.03359234150429863,
+        "p75": 0.22705451171250363,
+        "p90": 0.47698642906539285,
+        "mean": 0.22430791988662438
+      },
+      "row_mass_signed_relerr": {
+        "n": 276,
+        "median": -0.012720838068548157,
+        "p25": -0.13719998626903362,
+        "p75": 0.2922042908965533,
+        "p90": 1.1066055725757522,
+        "mean": 0.5357367425165176
+      },
+      "row_mass_abs_relerr": {
+        "n": 276,
+        "median": 0.16683034417663095,
+        "p25": 0.07972065699934232,
+        "p75": 0.4755290169999448,
+        "p90": 1.1066055725757522,
+        "mean": 0.7243104995980462
+      }
+    },
+    "B4": {
+      "type_count_signed_relerr": {
+        "n": 276,
+        "median": -0.019661059534943525,
+        "p25": -0.11971646942834636,
+        "p75": 0.06503068470932061,
+        "p90": 0.2896345615342238,
+        "mean": 0.0396131421858772
+      },
+      "type_count_abs_relerr": {
+        "n": 276,
+        "median": 0.09792243021451069,
+        "p25": 0.033592341504298594,
+        "p75": 0.22705451171250388,
+        "p90": 0.47698642906539285,
+        "mean": 0.2243079198866292
+      },
+      "row_mass_signed_relerr": {
+        "n": 276,
+        "median": 0.02306821854823271,
+        "p25": -0.05429766044817859,
+        "p75": 0.29280438443239015,
+        "p90": 1.1270760573969731,
+        "mean": 0.571956516159208
+      },
+      "row_mass_abs_relerr": {
+        "n": 276,
+        "median": 0.15060483858344992,
+        "p25": 0.033486684620580305,
+        "p75": 0.5002402614592691,
+        "p90": 1.1270760573969731,
+        "mean": 0.7142285012634276
+      }
+    }
+  },
+  "column_cross_check": {
+    "B1_total_mass_vs_smooth_bayes_pop_rel": {
+      "n": 276,
+      "max_abs_difference": 1.9063639555838563e-12,
+      "columns_match": true
+    },
+    "B4_total_mass_vs_eb_fit_pop_rel": {
+      "n": 276,
+      "max_abs_difference": 7.105427357601002e-15,
+      "columns_match": true
+    },
+    "total_types_vs_eb_fit_ndv_rel": {
+      "n": 276,
+      "max_abs_difference": 3.4852121189032914e-12,
+      "columns_match": true
+    },
+    "total_types_vs_smooth_bayes_ndv_rel": {
+      "n": 276,
+      "max_abs_difference": 1.9164669851079452e-12,
+      "columns_match": true
+    }
+  },
+  "row_mass_readout_improvement": {
+    "n": 276,
+    "median_abs_relerr_B1": 0.16683034417663095,
+    "median_abs_relerr_B4": 0.15060483858344992,
+    "median_ratio_B4_over_B1": 0.9027424796534476,
+    "ratio_ci95_cluster": {
+      "n_clusters": 69,
+      "point": 0.9027424796534476,
+      "ci95": [
+        0.6415393851926068,
+        0.9987523884069247
+      ]
+    },
+    "n_cases_B4_better": 144,
+    "n_ties": 1,
+    "n_cases_B4_worse": 131,
+    "median_paired_diff": -8.597832223496832e-05,
+    "wilcoxon_p_two_sided": 0.34715876829398973,
+    "interpretation": "The full-posterior readout improves the truncated row mass but leaves the truncated type count unchanged, because the type count is set by the unseen-type compensation."
+  },
+  "by_rate": {
+    "0.1": {
+      "n": 69,
+      "true_types_median": 124.0,
+      "true_mass_median": 268.0,
+      "B1_mass_median": 229.8773605934754,
+      "B4_mass_median": 230.01227150137598,
+      "B1_mass_abs_relerr_median": 0.21246206537075296,
+      "B4_mass_abs_relerr_median": 0.1999573165169531
+    },
+    "0.2": {
+      "n": 69,
+      "true_types_median": 124.0,
+      "true_mass_median": 268.0,
+      "B1_mass_median": 249.94625762948786,
+      "B4_mass_median": 250.01075101627325,
+      "B1_mass_abs_relerr_median": 0.16684580790170708,
+      "B4_mass_abs_relerr_median": 0.1475903325337133
+    },
+    "0.3": {
+      "n": 69,
+      "true_types_median": 124.0,
+      "true_mass_median": 268.0,
+      "B1_mass_median": 226.79184612551958,
+      "B4_mass_median": 236.72661654566343,
+      "B1_mass_abs_relerr_median": 0.15668415440853983,
+      "B4_mass_abs_relerr_median": 0.14948662841952007
+    },
+    "0.5": {
+      "n": 69,
+      "true_types_median": 124.0,
+      "true_mass_median": 268.0,
+      "B1_mass_median": 268.1402775631515,
+      "B4_mass_median": 276.00918502769173,
+      "B1_mass_abs_relerr_median": 0.1163124274300699,
+      "B4_mass_abs_relerr_median": 0.08241676933945126
+    }
+  }
+}

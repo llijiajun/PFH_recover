@@ -1,0 +1,159 @@
+{
+ "source_files": {
+  "a0_sweep": "results/thickening-necessity-multistep-vs-singlestep/a0_selection.json",
+  "prior_rootcause": "results/thickening-necessity-multistep-vs-singlestep/prior_rootcause.json",
+  "joint_csv": "experiments/results/joint_recovery/joint_metrics.csv"
+ },
+ "prior_sweep": {
+  "b0_fixed": 0.017016436321968153,
+  "n_evaluations_per_a0": 72,
+  "rows": [
+   {
+    "a0": 0.25,
+    "w1_mean": 3.9141385529226658,
+    "w1_sd": 0.13714999347653667,
+    "f1_relerr_mean": 0.2847879093173558,
+    "f1_relerr_sd": 0.0772286448489083,
+    "f2_relerr_mean": 0.6478725724604323,
+    "n_evaluations": 72
+   },
+   {
+    "a0": 0.5,
+    "w1_mean": 5.040985873092454,
+    "w1_sd": 0.12268036547882721,
+    "f1_relerr_mean": 0.5222779988243574,
+    "f1_relerr_sd": 0.05284056805536616,
+    "f2_relerr_mean": 0.5290308824677984,
+    "n_evaluations": 72
+   },
+   {
+    "a0": 1.0,
+    "w1_mean": 7.913372595996909,
+    "w1_sd": 0.14078903980362584,
+    "f1_relerr_mean": 0.7908880219012984,
+    "f1_relerr_sd": 0.025157330232446623,
+    "f2_relerr_mean": 0.5865979557137042,
+    "n_evaluations": 72
+   },
+   {
+    "a0": 2.0,
+    "w1_mean": 12.419982904992134,
+    "w1_sd": 0.23367110291502838,
+    "f1_relerr_mean": 0.9591851817904458,
+    "f1_relerr_sd": 0.0062703748862125265,
+    "f2_relerr_mean": 0.8392309103578285,
+    "n_evaluations": 72
+   },
+   {
+    "a0": 4.0,
+    "w1_mean": 17.542100518702373,
+    "w1_sd": 0.40288962685348306,
+    "f1_relerr_mean": 0.9979614202978647,
+    "f1_relerr_sd": 0.000524017166638737,
+    "f2_relerr_mean": 0.9842840433974811,
+    "n_evaluations": 72
+   },
+   {
+    "a0": 8.0,
+    "w1_mean": 21.6547909325337,
+    "w1_sd": 0.5746101547109359,
+    "f1_relerr_mean": 0.9999845569169169,
+    "f1_relerr_sd": 8.535733487240462e-06,
+    "f2_relerr_mean": 0.9997751954106572,
+    "n_evaluations": 72
+   }
+  ],
+  "w1_ratio_a0_8_over_a0_025": 5.532453856638311,
+  "w1_sd_ratio_a0_8_over_a0_025": 4.1896476999048415,
+  "oracle_best_a0_hist": {
+   "0.25": 72,
+   "0.5": 0,
+   "1.0": 0,
+   "2.0": 0,
+   "4.0": 0,
+   "8.0": 0
+  }
+ },
+ "prior_rootcause": {
+  "v_eff": 1701.6436321968151,
+  "b0": 0.017016436321968153,
+  "prior_mean_unseen": 8.547830975272962,
+  "true_mean_unseen": 0.12097360882411125,
+  "n_unseen": 29386.180555555555,
+  "f1_true": 1588.6805555555557,
+  "f1_obs": 395.6666666666667,
+  "f1_anchor": 332.09867514569083,
+  "f2_true": 340.80555555555554,
+  "f2_obs": 73.19444444444444,
+  "f1_rel_raw": 0.7508988286137507,
+  "f1_rel_anchor": 0.7908880219012983,
+  "f1_inflation_factor": 0.8393395328029254,
+  "unseen_mass_ratio": 70.65864247879901
+ },
+ "joint_diagnosis": [
+  {
+   "regime": "heavy",
+   "alpha": 1.3,
+   "V": 200,
+   "p": 0.1,
+   "n_cases": 72,
+   "ndv_true": 8787.166666666666,
+   "d_obs": 2395.1666666666665,
+   "mean_count_per_occupied_cell": 11.380232536084822,
+   "mean_count_per_marginal_value": 500.0,
+   "scale_ratio": 43.93583333333333,
+   "occupied_cell_fraction_of_V2": 0.21967916666666665,
+   "unseen_cell_fraction": 0.7274244637065417,
+   "q_ours": 49.61898255697396,
+   "q_gt": 2.1572295067740277
+  },
+  {
+   "regime": "heavy",
+   "alpha": 1.3,
+   "V": 200,
+   "p": 0.3,
+   "n_cases": 72,
+   "ndv_true": 8782.083333333334,
+   "d_obs": 4611.680555555556,
+   "mean_count_per_occupied_cell": 11.386819756132276,
+   "mean_count_per_marginal_value": 500.0,
+   "scale_ratio": 43.91041666666667,
+   "occupied_cell_fraction_of_V2": 0.21955208333333334,
+   "unseen_cell_fraction": 0.47487624741028933,
+   "q_ours": 51.40601993189599,
+   "q_gt": 5.435300762517313
+  },
+  {
+   "regime": "sparse",
+   "alpha": 0.4,
+   "V": 500,
+   "p": 0.1,
+   "n_cases": 72,
+   "ndv_true": 75109.625,
+   "d_obs": 9646.027777777777,
+   "mean_count_per_occupied_cell": 1.3313872889127059,
+   "mean_count_per_marginal_value": 200.0,
+   "scale_ratio": 150.21925000000002,
+   "occupied_cell_fraction_of_V2": 0.3004385,
+   "unseen_cell_fraction": 0.871574012281678,
+   "q_ours": 5.9243023363908645,
+   "q_gt": 1.2735500860712152
+  },
+  {
+   "regime": "sparse",
+   "alpha": 0.4,
+   "V": 500,
+   "p": 0.3,
+   "n_cases": 72,
+   "ndv_true": 75024.04166666667,
+   "d_obs": 27113.069444444445,
+   "mean_count_per_occupied_cell": 1.3329060628898401,
+   "mean_count_per_marginal_value": 200.0,
+   "scale_ratio": 150.04808333333335,
+   "occupied_cell_fraction_of_V2": 0.30009616666666666,
+   "unseen_cell_fraction": 0.6386082535394673,
+   "q_ours": 2.1580391127246026,
+   "q_gt": 1.2606901875337646
+  }
+ ]
+}

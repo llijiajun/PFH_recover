@@ -1,0 +1,95 @@
+{
+  "source": "experiments/results/readout_2x2/metrics.csv",
+  "readout_effect_by_boundary": {
+    "all": {
+      "label": "all",
+      "n": 275,
+      "median_B4": 0.025250310672543907,
+      "median_B1": 0.044778634681253204,
+      "win_rate_B4_lower": 0.36727272727272725,
+      "median_paired_diff": 0.0002312643987341101,
+      "wilcoxon_p_two_sided": 0.035872336438556814
+    },
+    "interior": {
+      "label": "a0>1e-3",
+      "n": 230,
+      "median_B4": 0.009456102131983668,
+      "median_B1": 0.02137711670529252,
+      "win_rate_B4_lower": 0.391304347826087,
+      "median_paired_diff": 9.984035877896869e-05,
+      "wilcoxon_p_two_sided": 0.7641614934585262
+    },
+    "boundary": {
+      "label": "a0<=1e-3",
+      "n": 45,
+      "median_B4": 11.255411111693832,
+      "median_B1": 9.94237865394842,
+      "win_rate_B4_lower": 0.24444444444444444,
+      "median_paired_diff": 0.32038681830839977,
+      "wilcoxon_p_two_sided": 2.754650267888792e-07
+    }
+  },
+  "readout_effect_by_rate_interior": {
+    "0.1": {
+      "label": "interior p=0.1",
+      "n": 54,
+      "median_B4": 0.019095459093282474,
+      "median_B1": 0.013102006919857467,
+      "win_rate_B4_lower": 0.37037037037037035,
+      "median_paired_diff": 0.0005868820990125867,
+      "wilcoxon_p_two_sided": 0.0010316905409178568
+    },
+    "0.2": {
+      "label": "interior p=0.2",
+      "n": 60,
+      "median_B4": 0.021127396710382607,
+      "median_B1": 0.03358201927703436,
+      "win_rate_B4_lower": 0.36666666666666664,
+      "median_paired_diff": 0.00025802901550542323,
+      "wilcoxon_p_two_sided": 0.11853945822690996
+    },
+    "0.3": {
+      "label": "interior p=0.3",
+      "n": 58,
+      "median_B4": 0.007351423705362403,
+      "median_B1": 0.0292926447798888,
+      "win_rate_B4_lower": 0.43103448275862066,
+      "median_paired_diff": 0.0002312643987341101,
+      "wilcoxon_p_two_sided": 0.41329488431386197
+    },
+    "0.5": {
+      "label": "interior p=0.5",
+      "n": 58,
+      "median_B4": 0.005263221689170372,
+      "median_B1": 0.017979853743816943,
+      "win_rate_B4_lower": 0.39655172413793105,
+      "median_paired_diff": 9.984035872212527e-05,
+      "wilcoxon_p_two_sided": 0.20690073716857416
+    }
+  },
+  "kept_set_paired": [
+    {
+      "comparator": "good_turing_w1",
+      "n": 224,
+      "win_rate_fitted_lower": 0.4419642857142857,
+      "median_paired_diff": 9.984035872212527e-05,
+      "cluster_ci95_win_rate": [
+        0.3303954924480806,
+        0.5517282042940794
+      ],
+      "wilcoxon_p_two_sided": 0.05168147134480868
+    },
+    {
+      "comparator": "smooth_bayes_w1",
+      "n": 230,
+      "win_rate_fitted_lower": 0.391304347826087,
+      "median_paired_diff": 9.984035877896869e-05,
+      "cluster_ci95_win_rate": [
+        0.28819463229895276,
+        0.4978165938864629
+      ],
+      "wilcoxon_p_two_sided": 0.7641614934585262
+    }
+  ],
+  "finding": "The integrated readout lowers the pooled median W1 on interior fits but is not a per-case win. On boundary fits it is significantly worse than the rounded readout. The sample-only a0 flag therefore identifies both the usable regime and the regime where the added readout should not be used."
+}

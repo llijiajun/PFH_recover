@@ -1,0 +1,72 @@
+{
+ "oracle_vs_naive": {
+  "n": 275,
+  "win_rate": 1.0,
+  "p": 6.809e-47,
+  "med_a": 0.001335,
+  "med_b": 4.0
+ },
+ "oracle_vs_svd": {
+  "n": 275,
+  "win_rate": 0.96,
+  "p": 6.49e-36,
+  "med_a": 0.001335,
+  "med_b": 6.801
+ },
+ "oracle_vs_gt": {
+  "n": 269,
+  "win_rate": 0.5019,
+  "p": 2.238e-05,
+  "med_a": 0.001444,
+  "med_b": 0.05189
+ },
+ "oracle_vs_loglog": {
+  "n": 86,
+  "win_rate": 0.907,
+  "p": 3.186e-11,
+  "med_a": 5.348,
+  "med_b": 89.46
+ },
+ "oracle_vs_cheby": {
+  "n": 76,
+  "win_rate": 0.8947,
+  "p": 3.083e-11,
+  "med_a": 6.435,
+  "med_b": 112.0
+ },
+ "fitted_vs_naive": {
+  "n": 275,
+  "win_rate": 1.0,
+  "p": 7.481e-47,
+  "med_a": 0.02525,
+  "med_b": 4.0
+ },
+ "fitted_vs_svd": {
+  "n": 275,
+  "win_rate": 0.96,
+  "p": 1.434e-35,
+  "med_a": 0.02525,
+  "med_b": 6.801
+ },
+ "fitted_vs_gt": {
+  "n": 269,
+  "win_rate": 0.4535,
+  "p": 0.08611,
+  "med_a": 0.02791,
+  "med_b": 0.05189
+ },
+ "fitted_vs_npmle": {
+  "n": 275,
+  "win_rate": 0.7673,
+  "p": 4.248e-27,
+  "med_a": 0.02525,
+  "med_b": 0.6451
+ },
+ "fitted_vs_sb": {
+  "n": 275,
+  "win_rate": 0.3491,
+  "p": 0.008373,
+  "med_a": 0.02525,
+  "med_b": 0.04478
+ }
+}

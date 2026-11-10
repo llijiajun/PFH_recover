@@ -1,0 +1,1149 @@
+{
+  "protocol": {
+    "question": "stratified validation of the 90% per-frequency credible band",
+    "population": "synthetic Zipf, n=100000, vocab=30000",
+    "alphas": [
+      1.0,
+      1.5,
+      2.0
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "retention_p": 0.1,
+    "posterior_draws_K": 120,
+    "evaluation_support": "j=1..512, the same truncation as the W1 metric",
+    "band": "pointwise 5th and 95th percentiles of the K posterior spectra",
+    "target": "spectrum of observed types in the true population",
+    "prior": "fitted_prior_eb from the thinned sample, fitted once per configuration",
+    "independent_grid": "This grid is not a recomputation of intervals_three_layer.json. The two populations differ, so the coverage values are not pooled.",
+    "non_independence_caveat": "Frequency bins inside one configuration are dependent. Wilson intervals are descriptive and are not a simultaneous guarantee.",
+    "uncertainty_included": "posterior count draws conditional on the fitted prior",
+    "uncertainty_excluded": "unknown abundance of types absent from the sample, and prior misspecification beyond the explicit parameter perturbation below",
+    "object_isolation": "This is per-frequency band coverage on j<=512. It does not validate the 95% per-type count interval or the L1 model-content figure."
+  },
+  "grid": {
+    "alpha1.0_seed0": {
+      "n_bins": 512,
+      "n_covered": 463,
+      "pooled_coverage": 0.904296875,
+      "populated_bins_n": 153,
+      "populated_bins_coverage": 0.6797385620915033,
+      "zero_mass_bins_n": 359,
+      "zero_mass_bins_coverage": 1.0,
+      "by_true_bin_mass": {
+        "head_gt_100": {
+          "n_bins": 7,
+          "n_covered": 0,
+          "coverage": 0.0,
+          "wilson_ci95": [
+            5.551115123125783e-17,
+            0.35433043506668743
+          ]
+        },
+        "mid_11_100": {
+          "n_bins": 21,
+          "n_covered": 12,
+          "coverage": 0.5714285714285714,
+          "wilson_ci95": [
+            0.3654655436930671,
+            0.7553003107462404
+          ]
+        },
+        "rare_1_10": {
+          "n_bins": 125,
+          "n_covered": 92,
+          "coverage": 0.736,
+          "wilson_ci95": [
+            0.6525256076191854,
+            0.8054015265504846
+          ]
+        },
+        "zero_mass": {
+          "n_bins": 359,
+          "n_covered": 359,
+          "coverage": 1.0,
+          "wilson_ci95": [
+            0.9894128448463978,
+            1.0
+          ]
+        }
+      },
+      "by_frequency_index": {
+        "j_21_512": {
+          "n_bins": 492,
+          "n_covered": 459,
+          "coverage": 0.9329268292682927,
+          "wilson_ci95": [
+            0.9073009440422957,
+            0.9518446405427359
+          ]
+        },
+        "j_2_5": {
+          "n_bins": 4,
+          "n_covered": 0,
+          "coverage": 0.0,
+          "wilson_ci95": [
+            0.0,
+            0.4898908364545973
+          ]
+        },
+        "j_6_20": {
+          "n_bins": 15,
+          "n_covered": 4,
+          "coverage": 0.26666666666666666,
+          "wilson_ci95": [
+            0.10897453325692374,
+            0.5195043405598057
+          ]
+        },
+        "j_eq_1": {
+          "n_bins": 1,
+          "n_covered": 0,
+          "coverage": 0.0,
+          "wilson_ci95": [
+            0.0,
+            0.7934506856227626
+          ]
+        }
+      },
+      "median_band_width": 1.0,
+      "alpha": 1.0,
+      "seed": 0,
+      "fitted_a0": 0.0010000000000501246,
+      "fitted_b0": 0.13604673356339578,
+      "n_observed_types": 3609
+    },
+    "alpha1.0_seed1": {
+      "n_bins": 512,
+      "n_covered": 455,
+      "pooled_coverage": 0.888671875,
+      "populated_bins_n": 150,
+      "populated_bins_coverage": 0.62,
+      "zero_mass_bins_n": 362,
+      "zero_mass_bins_coverage": 1.0,
+      "by_true_bin_mass": {
+        "head_gt_100": {
+          "n_bins": 7,
+          "n_covered": 1,
+          "coverage": 0.14285714285714285,
+          "wilson_ci95": [
+            0.02567962434474355,
+            0.5131278292743189
+          ]
+        },
+        "mid_11_100": {
+          "n_bins": 25,
+          "n_covered": 11,
+          "coverage": 0.44,
+          "wilson_ci95": [
+            0.26665638881067344,
+            0.6293266813020123
+          ]
+        },
+        "rare_1_10": {
+          "n_bins": 118,
+          "n_covered": 81,
+          "coverage": 0.6864406779661016,
+          "wilson_ci95": [
+            0.5979749321048041,
+            0.7631500940224013
+          ]
+        },
+        "zero_mass": {
+          "n_bins": 362,
+          "n_covered": 362,
+          "coverage": 1.0,
+          "wilson_ci95": [
+            0.9894996624136662,
+            0.9999999999999999
+          ]
+        }
+      },
+      "by_frequency_index": {
+        "j_21_512": {
+          "n_bins": 492,
+          "n_covered": 451,
+          "coverage": 0.9166666666666666,
+          "wilson_ci95": [
+            0.8888981855503231,
+            0.9379790202709513
+          ]
+        },
+        "j_2_5": {
+          "n_bins": 4,
+          "n_covered": 1,
+          "coverage": 0.25,
+          "wilson_ci95": [
+            0.04558726080970055,
+            0.6993581574175981
+          ]
+        },
+        "j_6_20": {
+          "n_bins": 15,
+          "n_covered": 3,
+          "coverage": 0.2,
+          "wilson_ci95": [
+            0.07047549346981563,
+            0.45185448715169363
+          ]
+        },
+        "j_eq_1": {
+          "n_bins": 1,
+          "n_covered": 0,
+          "coverage": 0.0,
+          "wilson_ci95": [
+            0.0,
+            0.7934506856227626
+          ]
+        }
+      },
+      "median_band_width": 1.0,
+      "alpha": 1.0,
+      "seed": 1,
+      "fitted_a0": 0.001000000000002361,
+      "fitted_b0": 0.1387562231698933,
+      "n_observed_types": 3650
+    },
+    "alpha1.0_seed2": {
+      "n_bins": 512,
+      "n_covered": 462,
+      "pooled_coverage": 0.90234375,
+      "populated_bins_n": 150,
+      "populated_bins_coverage": 0.6666666666666666,
+      "zero_mass_bins_n": 362,
+      "zero_mass_bins_coverage": 1.0,
+      "by_true_bin_mass": {
+        "head_gt_100": {
+          "n_bins": 7,
+          "n_covered": 1,
+          "coverage": 0.14285714285714285,
+          "wilson_ci95": [
+            0.02567962434474355,
+            0.5131278292743189
+          ]
+        },
+        "mid_11_100": {
+          "n_bins": 24,
+          "n_covered": 10,
+          "coverage": 0.4166666666666667,
+          "wilson_ci95": [
+            0.24467602609811764,
+            0.6116533413477124
+          ]
+        },
+        "rare_1_10": {
+          "n_bins": 119,
+          "n_covered": 89,
+          "coverage": 0.7478991596638656,
+          "wilson_ci95": [
+            0.6629702080798199,
+            0.8173236647414035
+          ]
+        },
+        "zero_mass": {
+          "n_bins": 362,
+          "n_covered": 362,
+          "coverage": 1.0,
+          "wilson_ci95": [
+            0.9894996624136662,
+            0.9999999999999999
+          ]
+        }
+      },
+      "by_frequency_index": {
+        "j_21_512": {
+          "n_bins": 492,
+          "n_covered": 458,
+          "coverage": 0.9308943089430894,
+          "wilson_ci95": [
+            0.9049832001429722,
+            0.9501288370965896
+          ]
+        },
+        "j_2_5": {
+          "n_bins": 4,
+          "n_covered": 1,
+          "coverage": 0.25,
+          "wilson_ci95": [
+            0.04558726080970055,
+            0.6993581574175981
+          ]
+        },
+        "j_6_20": {
+          "n_bins": 15,
+          "n_covered": 3,
+          "coverage": 0.2,
+          "wilson_ci95": [
+            0.07047549346981563,
+            0.45185448715169363
+          ]
+        },
+        "j_eq_1": {
+          "n_bins": 1,
+          "n_covered": 0,
+          "coverage": 0.0,
+          "wilson_ci95": [
+            0.0,
+            0.7934506856227626
+          ]
+        }
+      },
+      "median_band_width": 1.0,
+      "alpha": 1.0,
+      "seed": 2,
+      "fitted_a0": 0.0010000000000001557,
+      "fitted_b0": 0.1174223456642411,
+      "n_observed_types": 3485
+    },
+    "alpha1.5_seed0": {
+      "n_bins": 512,
+      "n_covered": 487,
+      "pooled_coverage": 0.951171875,
+      "populated_bins_n": 102,
+      "populated_bins_coverage": 0.7549019607843137,
+      "zero_mass_bins_n": 410,
+      "zero_mass_bins_coverage": 1.0,
+      "by_true_bin_mass": {
+        "head_gt_100": {
+          "n_bins": 1,
+          "n_covered": 0,
+          "coverage": 0.0,
+          "wilson_ci95": [
+            0.0,
+            0.7934506856227626
+          ]
+        },
+        "mid_11_100": {
+          "n_bins": 12,
+          "n_covered": 6,
+          "coverage": 0.5,
+          "wilson_ci95": [
+            0.2537815976337061,
+            0.7462184023662939
+          ]
+        },
+        "rare_1_10": {
+          "n_bins": 89,
+          "n_covered": 71,
+          "coverage": 0.797752808988764,
+          "wilson_ci95": [
+            0.7028034801630848,
+            0.8680621726737535
+          ]
+        },
+        "zero_mass": {
+          "n_bins": 410,
+          "n_covered": 410,
+          "coverage": 1.0,
+          "wilson_ci95": [
+            0.9907175592516977,
+            1.0
+          ]
+        }
+      },
+      "by_frequency_index": {
+        "j_21_512": {
+          "n_bins": 492,
+          "n_covered": 477,
+          "coverage": 0.9695121951219512,
+          "wilson_ci95": [
+            0.9503109845663958,
+            0.9814384522370888
+          ]
+        },
+        "j_2_5": {
+          "n_bins": 4,
+          "n_covered": 2,
+          "coverage": 0.5,
+          "wilson_ci95": [
+            0.15003898915214947,
+            0.8499610108478506
+          ]
+        },
+        "j_6_20": {
+          "n_bins": 15,
+          "n_covered": 8,
+          "coverage": 0.5333333333333333,
+          "wilson_ci95": [
+            0.30116980025498397,
+            0.7519046463426261
+          ]
+        },
+        "j_eq_1": {
+          "n_bins": 1,
+          "n_covered": 0,
+          "coverage": 0.0,
+          "wilson_ci95": [
+            0.0,
+            0.7934506856227626
+          ]
+        }
+      },
+      "median_band_width": 0.04999999999999716,
+      "alpha": 1.5,
+      "seed": 0,
+      "fitted_a0": 0.0010000000001457387,
+      "fitted_b0": 0.06895414975026588,
+      "n_observed_types": 623
+    },
+    "alpha1.5_seed1": {
+      "n_bins": 512,
+      "n_covered": 488,
+      "pooled_coverage": 0.953125,
+      "populated_bins_n": 102,
+      "populated_bins_coverage": 0.7745098039215687,
+      "zero_mass_bins_n": 410,
+      "zero_mass_bins_coverage": 0.9975609756097561,
+      "by_true_bin_mass": {
+        "head_gt_100": {
+          "n_bins": 1,
+          "n_covered": 0,
+          "coverage": 0.0,
+          "wilson_ci95": [
+            0.0,
+            0.7934506856227626
+          ]
+        },
+        "mid_11_100": {
+          "n_bins": 10,
+          "n_covered": 6,
+          "coverage": 0.6,
+          "wilson_ci95": [
+            0.31267376973365824,
+            0.8318196702937638
+          ]
+        },
+        "rare_1_10": {
+          "n_bins": 91,
+          "n_covered": 73,
+          "coverage": 0.8021978021978022,
+          "wilson_ci95": [
+            0.708859763030568,
+            0.871055399429999
+          ]
+        },
+        "zero_mass": {
+          "n_bins": 410,
+          "n_covered": 409,
+          "coverage": 0.9975609756097561,
+          "wilson_ci95": [
+            0.9863154681899297,
+            0.9995693224800525
+          ]
+        }
+      },
+      "by_frequency_index": {
+        "j_21_512": {
+          "n_bins": 492,
+          "n_covered": 476,
+          "coverage": 0.967479674796748,
+          "wilson_ci95": [
+            0.94783078066195,
+            0.9798851087960653
+          ]
+        },
+        "j_2_5": {
+          "n_bins": 4,
+          "n_covered": 3,
+          "coverage": 0.75,
+          "wilson_ci95": [
+            0.30064184258240184,
+            0.9544127391902995
+          ]
+        },
+        "j_6_20": {
+          "n_bins": 15,
+          "n_covered": 9,
+          "coverage": 0.6,
+          "wilson_ci95": [
+            0.357468301206246,
+            0.8017550385865841
+          ]
+        },
+        "j_eq_1": {
+          "n_bins": 1,
+          "n_covered": 0,
+          "coverage": 0.0,
+          "wilson_ci95": [
+            0.0,
+            0.7934506856227626
+          ]
+        }
+      },
+      "median_band_width": 1.0,
+      "alpha": 1.5,
+      "seed": 1,
+      "fitted_a0": 0.00100000000006577,
+      "fitted_b0": 0.05960371491247911,
+      "n_observed_types": 571
+    },
+    "alpha1.5_seed2": {
+      "n_bins": 512,
+      "n_covered": 486,
+      "pooled_coverage": 0.94921875,
+      "populated_bins_n": 100,
+      "populated_bins_coverage": 0.74,
+      "zero_mass_bins_n": 412,
+      "zero_mass_bins_coverage": 1.0,
+      "by_true_bin_mass": {
+        "head_gt_100": {
+          "n_bins": 1,
+          "n_covered": 0,
+          "coverage": 0.0,
+          "wilson_ci95": [
+            0.0,
+            0.7934506856227626
+          ]
+        },
+        "mid_11_100": {
+          "n_bins": 9,
+          "n_covered": 5,
+          "coverage": 0.5555555555555556,
+          "wilson_ci95": [
+            0.26665129349549305,
+            0.8112214789023355
+          ]
+        },
+        "rare_1_10": {
+          "n_bins": 90,
+          "n_covered": 69,
+          "coverage": 0.7666666666666667,
+          "wilson_ci95": [
+            0.6694829435426721,
+            0.8420180561563537
+          ]
+        },
+        "zero_mass": {
+          "n_bins": 412,
+          "n_covered": 412,
+          "coverage": 1.0,
+          "wilson_ci95": [
+            0.9907622033849433,
+            1.0
+          ]
+        }
+      },
+      "by_frequency_index": {
+        "j_21_512": {
+          "n_bins": 492,
+          "n_covered": 475,
+          "coverage": 0.9654471544715447,
+          "wilson_ci95": [
+            0.9453655329715431,
+            0.9783168091410024
+          ]
+        },
+        "j_2_5": {
+          "n_bins": 4,
+          "n_covered": 3,
+          "coverage": 0.75,
+          "wilson_ci95": [
+            0.30064184258240184,
+            0.9544127391902995
+          ]
+        },
+        "j_6_20": {
+          "n_bins": 15,
+          "n_covered": 8,
+          "coverage": 0.5333333333333333,
+          "wilson_ci95": [
+            0.30116980025498397,
+            0.7519046463426261
+          ]
+        },
+        "j_eq_1": {
+          "n_bins": 1,
+          "n_covered": 0,
+          "coverage": 0.0,
+          "wilson_ci95": [
+            0.0,
+            0.7934506856227626
+          ]
+        }
+      },
+      "median_band_width": 0.04999999999999716,
+      "alpha": 1.5,
+      "seed": 2,
+      "fitted_a0": 0.0010000000006596893,
+      "fitted_b0": 0.08982663646133156,
+      "n_observed_types": 638
+    },
+    "alpha2.0_seed0": {
+      "n_bins": 512,
+      "n_covered": 499,
+      "pooled_coverage": 0.974609375,
+      "populated_bins_n": 55,
+      "populated_bins_coverage": 0.7818181818181819,
+      "zero_mass_bins_n": 457,
+      "zero_mass_bins_coverage": 0.9978118161925602,
+      "by_true_bin_mass": {
+        "mid_11_100": {
+          "n_bins": 3,
+          "n_covered": 2,
+          "coverage": 0.6666666666666666,
+          "wilson_ci95": [
+            0.2076596008020477,
+            0.9385080552796037
+          ]
+        },
+        "rare_1_10": {
+          "n_bins": 52,
+          "n_covered": 41,
+          "coverage": 0.7884615384615384,
+          "wilson_ci95": [
+            0.6596789537149542,
+            0.8775562946751251
+          ]
+        },
+        "zero_mass": {
+          "n_bins": 457,
+          "n_covered": 456,
+          "coverage": 0.9978118161925602,
+          "wilson_ci95": [
+            0.9877107361507956,
+            0.9996136273393242
+          ]
+        }
+      },
+      "by_frequency_index": {
+        "j_21_512": {
+          "n_bins": 492,
+          "n_covered": 482,
+          "coverage": 0.9796747967479674,
+          "wilson_ci95": [
+            0.9629941661382083,
+            0.9889230073926244
+          ]
+        },
+        "j_2_5": {
+          "n_bins": 4,
+          "n_covered": 4,
+          "coverage": 1.0,
+          "wilson_ci95": [
+            0.5101091635454027,
+            1.0
+          ]
+        },
+        "j_6_20": {
+          "n_bins": 15,
+          "n_covered": 13,
+          "coverage": 0.8666666666666667,
+          "wilson_ci95": [
+            0.6211801716767764,
+            0.9626387408969346
+          ]
+        },
+        "j_eq_1": {
+          "n_bins": 1,
+          "n_covered": 0,
+          "coverage": 0.0,
+          "wilson_ci95": [
+            0.0,
+            0.7934506856227626
+          ]
+        }
+      },
+      "median_band_width": 0.0,
+      "alpha": 2.0,
+      "seed": 0,
+      "fitted_a0": 0.0010000000000000473,
+      "fitted_b0": 0.03401537357157988,
+      "n_observed_types": 146
+    },
+    "alpha2.0_seed1": {
+      "n_bins": 512,
+      "n_covered": 498,
+      "pooled_coverage": 0.97265625,
+      "populated_bins_n": 49,
+      "populated_bins_coverage": 0.7346938775510204,
+      "zero_mass_bins_n": 463,
+      "zero_mass_bins_coverage": 0.9978401727861771,
+      "by_true_bin_mass": {
+        "mid_11_100": {
+          "n_bins": 1,
+          "n_covered": 0,
+          "coverage": 0.0,
+          "wilson_ci95": [
+            0.0,
+            0.7934506856227626
+          ]
+        },
+        "rare_1_10": {
+          "n_bins": 48,
+          "n_covered": 36,
+          "coverage": 0.75,
+          "wilson_ci95": [
+            0.6121562719049204,
+            0.8507936632620209
+          ]
+        },
+        "zero_mass": {
+          "n_bins": 463,
+          "n_covered": 462,
+          "coverage": 0.9978401727861771,
+          "wilson_ci95": [
+            0.9878686392746157,
+            0.9996186356656811
+          ]
+        }
+      },
+      "by_frequency_index": {
+        "j_21_512": {
+          "n_bins": 492,
+          "n_covered": 480,
+          "coverage": 0.975609756097561,
+          "wilson_ci95": [
+            0.9578563440190468,
+            0.9859937348208467
+          ]
+        },
+        "j_2_5": {
+          "n_bins": 4,
+          "n_covered": 4,
+          "coverage": 1.0,
+          "wilson_ci95": [
+            0.5101091635454027,
+            1.0
+          ]
+        },
+        "j_6_20": {
+          "n_bins": 15,
+          "n_covered": 14,
+          "coverage": 0.9333333333333333,
+          "wilson_ci95": [
+            0.7018347012621998,
+            0.9881331045067315
+          ]
+        },
+        "j_eq_1": {
+          "n_bins": 1,
+          "n_covered": 0,
+          "coverage": 0.0,
+          "wilson_ci95": [
+            0.0,
+            0.7934506856227626
+          ]
+        }
+      },
+      "median_band_width": 0.0,
+      "alpha": 2.0,
+      "seed": 1,
+      "fitted_a0": 0.0010000000000002002,
+      "fitted_b0": 0.020664672333455796,
+      "n_observed_types": 121
+    },
+    "alpha2.0_seed2": {
+      "n_bins": 512,
+      "n_covered": 502,
+      "pooled_coverage": 0.98046875,
+      "populated_bins_n": 57,
+      "populated_bins_coverage": 0.8421052631578947,
+      "zero_mass_bins_n": 455,
+      "zero_mass_bins_coverage": 0.9978021978021978,
+      "by_true_bin_mass": {
+        "mid_11_100": {
+          "n_bins": 1,
+          "n_covered": 0,
+          "coverage": 0.0,
+          "wilson_ci95": [
+            0.0,
+            0.7934506856227626
+          ]
+        },
+        "rare_1_10": {
+          "n_bins": 56,
+          "n_covered": 48,
+          "coverage": 0.8571428571428571,
+          "wilson_ci95": [
+            0.7426407877129466,
+            0.9257921146307937
+          ]
+        },
+        "zero_mass": {
+          "n_bins": 455,
+          "n_covered": 454,
+          "coverage": 0.9978021978021978,
+          "wilson_ci95": [
+            0.9876571843382158,
+            0.9996119285363971
+          ]
+        }
+      },
+      "by_frequency_index": {
+        "j_21_512": {
+          "n_bins": 492,
+          "n_covered": 485,
+          "coverage": 0.9857723577235772,
+          "wilson_ci95": [
+            0.9709264054235485,
+            0.9930914101436932
+          ]
+        },
+        "j_2_5": {
+          "n_bins": 4,
+          "n_covered": 3,
+          "coverage": 0.75,
+          "wilson_ci95": [
+            0.30064184258240184,
+            0.9544127391902995
+          ]
+        },
+        "j_6_20": {
+          "n_bins": 15,
+          "n_covered": 14,
+          "coverage": 0.9333333333333333,
+          "wilson_ci95": [
+            0.7018347012621998,
+            0.9881331045067315
+          ]
+        },
+        "j_eq_1": {
+          "n_bins": 1,
+          "n_covered": 0,
+          "coverage": 0.0,
+          "wilson_ci95": [
+            0.0,
+            0.7934506856227626
+          ]
+        }
+      },
+      "median_band_width": 0.0,
+      "alpha": 2.0,
+      "seed": 2,
+      "fitted_a0": 0.0010000000000045123,
+      "fitted_b0": 0.02048586745831427,
+      "n_observed_types": 142
+    }
+  },
+  "pooled_over_9_configurations": {
+    "n_bins": 4608,
+    "n_covered": 4340,
+    "coverage": 0.9418402777777778,
+    "by_true_bin_mass": {
+      "head_gt_100": {
+        "n_bins": 24,
+        "n_covered": 2,
+        "coverage": 0.08333333333333333,
+        "wilson_ci95": [
+          0.023158815297043306,
+          0.25848802193210685
+        ]
+      },
+      "mid_11_100": {
+        "n_bins": 106,
+        "n_covered": 52,
+        "coverage": 0.49056603773584906,
+        "wilson_ci95": [
+          0.39740700785165506,
+          0.5843849309893538
+        ]
+      },
+      "rare_1_10": {
+        "n_bins": 788,
+        "n_covered": 600,
+        "coverage": 0.7614213197969543,
+        "wilson_ci95": [
+          0.7304396250539251,
+          0.7898665491309933
+        ]
+      },
+      "zero_mass": {
+        "n_bins": 3690,
+        "n_covered": 3686,
+        "coverage": 0.9989159891598915,
+        "wilson_ci95": [
+          0.9972158987499657,
+          0.9995783711306709
+        ]
+      }
+    },
+    "by_frequency_index": {
+      "j_21_512": {
+        "n_bins": 4428,
+        "n_covered": 4243,
+        "coverage": 0.9582204155374887,
+        "wilson_ci95": [
+          0.951919109713717,
+          0.9637273631363807
+        ]
+      },
+      "j_2_5": {
+        "n_bins": 36,
+        "n_covered": 21,
+        "coverage": 0.5833333333333334,
+        "wilson_ci95": [
+          0.4220025157487166,
+          0.7285943794855394
+        ]
+      },
+      "j_6_20": {
+        "n_bins": 135,
+        "n_covered": 76,
+        "coverage": 0.562962962962963,
+        "wilson_ci95": [
+          0.4786961362500333,
+          0.6437456771996116
+        ]
+      },
+      "j_eq_1": {
+        "n_bins": 9,
+        "n_covered": 0,
+        "coverage": 0.0,
+        "wilson_ci95": [
+          0.0,
+          0.2991450484195441
+        ]
+      }
+    },
+    "per_config_pooled_coverage": [
+      0.904296875,
+      0.888671875,
+      0.90234375,
+      0.951171875,
+      0.953125,
+      0.94921875,
+      0.974609375,
+      0.97265625,
+      0.98046875
+    ],
+    "per_config_populated_coverage": [
+      0.6797385620915033,
+      0.62,
+      0.6666666666666666,
+      0.7549019607843137,
+      0.7745098039215687,
+      0.74,
+      0.7818181818181819,
+      0.7346938775510204,
+      0.8421052631578947
+    ]
+  },
+  "prior_parameter_sensitivity": {
+    "base_config": "alpha1.0_seed0",
+    "perturbation": "a0 and b0 jointly scaled by 1+delta, same sample and same draw seed",
+    "results": {
+      "-0.50": {
+        "a0": 0.0005000000000250623,
+        "b0": 0.06802336678169789,
+        "pooled_coverage": 0.916015625,
+        "populated_bins_coverage": 0.7189542483660131,
+        "zero_mass_bins_coverage": 1.0,
+        "median_band_width": 1.0
+      },
+      "-0.25": {
+        "a0": 0.0007500000000375934,
+        "b0": 0.10203505017254683,
+        "pooled_coverage": 0.9140625,
+        "populated_bins_coverage": 0.7124183006535948,
+        "zero_mass_bins_coverage": 1.0,
+        "median_band_width": 1.0
+      },
+      "-0.10": {
+        "a0": 0.0009000000000451122,
+        "b0": 0.1224420602070562,
+        "pooled_coverage": 0.91015625,
+        "populated_bins_coverage": 0.6993464052287581,
+        "zero_mass_bins_coverage": 1.0,
+        "median_band_width": 1.0
+      },
+      "+0.00": {
+        "a0": 0.0010000000000501246,
+        "b0": 0.13604673356339578,
+        "pooled_coverage": 0.90625,
+        "populated_bins_coverage": 0.6862745098039216,
+        "zero_mass_bins_coverage": 1.0,
+        "median_band_width": 1.0
+      },
+      "+0.10": {
+        "a0": 0.0011000000000551372,
+        "b0": 0.14965140691973536,
+        "pooled_coverage": 0.896484375,
+        "populated_bins_coverage": 0.6535947712418301,
+        "zero_mass_bins_coverage": 1.0,
+        "median_band_width": 1.0
+      },
+      "+0.25": {
+        "a0": 0.0012500000000626559,
+        "b0": 0.17005841695424473,
+        "pooled_coverage": 0.888671875,
+        "populated_bins_coverage": 0.6274509803921569,
+        "zero_mass_bins_coverage": 1.0,
+        "median_band_width": 1.0
+      },
+      "+0.50": {
+        "a0": 0.0015000000000751868,
+        "b0": 0.20407010034509365,
+        "pooled_coverage": 0.880859375,
+        "populated_bins_coverage": 0.6013071895424836,
+        "zero_mass_bins_coverage": 1.0,
+        "median_band_width": 1.0
+      }
+    }
+  },
+  "conformal_calibration": {
+    "calibration_configurations": [
+      "alpha1.0_seed0",
+      "alpha1.0_seed1",
+      "alpha1.5_seed0",
+      "alpha1.5_seed1",
+      "alpha2.0_seed0",
+      "alpha2.0_seed1"
+    ],
+    "holdout_configurations": [
+      "alpha1.0_seed2",
+      "alpha1.5_seed2",
+      "alpha2.0_seed2"
+    ],
+    "target_level": 0.9,
+    "score": "max(lo - true, true - hi) on populated bins only",
+    "n_calibration_scores": 611,
+    "conformal_quantile_q": 1.9500000000000028,
+    "calibrated_band": "[lo - q, hi + q]",
+    "width_note": "one scalar additive inflation, no per-bin refitting",
+    "holdout_raw": {
+      "n_configurations": 3,
+      "n_bins": 1536,
+      "pooled_coverage": 0.9440104166666666,
+      "populated_bins_n": 307,
+      "populated_bins_coverage": 0.7231270358306189,
+      "by_true_bin_mass": {
+        "head_gt_100": {
+          "n_bins": 8,
+          "coverage": 0.125
+        },
+        "mid_11_100": {
+          "n_bins": 34,
+          "coverage": 0.4411764705882353
+        },
+        "rare_1_10": {
+          "n_bins": 265,
+          "coverage": 0.7773584905660378
+        },
+        "zero_mass": {
+          "n_bins": 1229,
+          "coverage": 0.9991863303498779
+        }
+      }
+    },
+    "holdout_calibrated": {
+      "n_configurations": 3,
+      "n_bins": 1536,
+      "pooled_coverage": 0.9798177083333334,
+      "populated_bins_n": 307,
+      "populated_bins_coverage": 0.8990228013029316,
+      "by_true_bin_mass": {
+        "head_gt_100": {
+          "n_bins": 8,
+          "coverage": 0.125
+        },
+        "mid_11_100": {
+          "n_bins": 34,
+          "coverage": 0.5882352941176471
+        },
+        "rare_1_10": {
+          "n_bins": 265,
+          "coverage": 0.9622641509433962
+        },
+        "zero_mass": {
+          "n_bins": 1229,
+          "coverage": 1.0
+        }
+      }
+    },
+    "calibration_in_sample_calibrated": {
+      "n_configurations": 6,
+      "n_bins": 3072,
+      "pooled_coverage": 0.9807942708333334,
+      "populated_bins_n": 611,
+      "populated_bins_coverage": 0.9034369885433715,
+      "by_true_bin_mass": {
+        "head_gt_100": {
+          "n_bins": 16,
+          "coverage": 0.125
+        },
+        "mid_11_100": {
+          "n_bins": 72,
+          "coverage": 0.5833333333333334
+        },
+        "rare_1_10": {
+          "n_bins": 523,
+          "coverage": 0.97131931166348
+        },
+        "zero_mass": {
+          "n_bins": 2461,
+          "coverage": 1.0
+        }
+      }
+    },
+    "exchangeability_unit": "configuration, not frequency bin",
+    "guarantee_scope": "Empirical holdout coverage on three unseen configurations. Bins within a configuration are dependent, so no simultaneous per-bin guarantee is claimed.",
+    "layerwise_variant": {
+      "q_by_layer": {
+        "head_gt_100": 222.79999999999995,
+        "mid_11_100": 20.0,
+        "rare_1_10": 1.0,
+        "zero_mass": 0.0
+      },
+      "n_calibration_scores_by_layer": {
+        "head_gt_100": 16,
+        "mid_11_100": 72,
+        "rare_1_10": 523,
+        "zero_mass": 2461
+      },
+      "calibrated_band": "[lo - q_layer, hi + q_layer]",
+      "holdout": {
+        "n_configurations": 3,
+        "populated_bins_n": 307,
+        "populated_bins_coverage": 0.9413680781758957,
+        "median_band_width": 1.0,
+        "by_true_bin_mass": {
+          "head_gt_100": {
+            "n_bins": 8,
+            "coverage": 0.875
+          },
+          "mid_11_100": {
+            "n_bins": 34,
+            "coverage": 0.8529411764705882
+          },
+          "rare_1_10": {
+            "n_bins": 265,
+            "coverage": 0.9547169811320755
+          },
+          "zero_mass": {
+            "n_bins": 1229,
+            "coverage": 0.9991863303498779
+          }
+        }
+      },
+      "calibration_in_sample": {
+        "n_configurations": 6,
+        "populated_bins_n": 611,
+        "populated_bins_coverage": 0.9639934533551555,
+        "median_band_width": 1.0,
+        "by_true_bin_mass": {
+          "head_gt_100": {
+            "n_bins": 16,
+            "coverage": 1.0
+          },
+          "mid_11_100": {
+            "n_bins": 72,
+            "coverage": 0.9166666666666666
+          },
+          "rare_1_10": {
+            "n_bins": 523,
+            "coverage": 0.9694072657743786
+          },
+          "zero_mass": {
+            "n_bins": 2461,
+            "coverage": 0.9987809833401057
+          }
+        }
+      },
+      "scope": "Layer-wise inflations are fitted on six configurations. Layers with few calibration bins have unstable quantiles, so this is a diagnostic of scale sensitivity rather than a deployable guarantee."
+    }
+  },
+  "headline": "Pooled coverage is near nominal, but populated frequency bins are under-covered. A single conformal inflation fitted on six configurations is evaluated on three held-out configurations."
+}

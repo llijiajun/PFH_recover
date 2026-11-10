@@ -1,0 +1,53 @@
+{
+  "real_columns": {
+    "n_cases": 276,
+    "a0_bound": 0.001,
+    "n_boundary": 45,
+    "boundary_fraction": 0.16304347826086957,
+    "n_boundary_attributes": 14,
+    "a0_median": 0.24999873626797353,
+    "a0_min": 0.001000000000000002,
+    "a0_max": 2.0,
+    "per_dataset": {
+      "Airlines": {
+        "n": 36,
+        "boundary": 0
+      },
+      "NCVoter": {
+        "n": 220,
+        "boundary": 37
+      },
+      "kasandr": {
+        "n": 20,
+        "boundary": 8
+      }
+    },
+    "eb_w1_median_boundary": 9.263289328168057,
+    "eb_w1_median_interior": 0.009456102131941035
+  },
+  "synthetic_families": {
+    "concentrated": {
+      "n": 12,
+      "boundary": 0
+    },
+    "geopoor": {
+      "n": 12,
+      "boundary": 2
+    },
+    "mix": {
+      "n": 12,
+      "boundary": 0
+    },
+    "spiked": {
+      "n": 12,
+      "boundary": 12
+    },
+    "zipf": {
+      "n": 12,
+      "boundary": 12
+    }
+  },
+  "source_real": "experiments/results/fitted_prior_validation/fitted_metrics.csv",
+  "source_synthetic": "experiments/results/data_dependency/summary.json",
+  "fitter": "eb_prior.fitted_prior_eb, least-squares lower bound on a0 = 1e-3"
+}

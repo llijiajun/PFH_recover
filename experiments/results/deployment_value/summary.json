@@ -1,0 +1,384 @@
+{
+  "protocol": {
+    "question": "aggregate deployment value of the full method relative to the closest estimator",
+    "source": "experiments/results/modern_baselines/modern_metrics.csv",
+    "n_cases_planned": 276,
+    "n_cases_scored_w1": 275,
+    "excluded": 1,
+    "metric": "W1 on the normalized spectrum truncated to j<=512",
+    "estimand": "aggregate median W1 over cases, plus paired win rate as a separate quantity",
+    "selector": "known retention rate p >= 0.2",
+    "selector_properties": [
+      "p is part of the sampling-channel contract and is known before recovery",
+      "the threshold is the boundary between the four archived rate cells",
+      "no ground-truth quantity and no fitted model output is used",
+      "the threshold is not refit on the held-out attribute halves"
+    ],
+    "cluster_unit": "attribute column, because each column is sampled at four rates",
+    "bootstrap": {
+      "replicates": 4000,
+      "seed": 20261110,
+      "unit": "attribute column"
+    },
+    "tail_threshold_w1": 0.1,
+    "interpretation_caveat": "Aggregate median gain and paired win rate are different quantities. A lower median does not imply per-case dominance, and the paired difference in the selectable regime is not significant."
+  },
+  "rate_cells": {
+    "0.1": {
+      "n": 68,
+      "median_fitted": 0.04801856742213767,
+      "median_sb": 0.04673665500194418,
+      "median_ratio": 1.0274284160931106,
+      "wins": 21,
+      "ties": 0,
+      "losses": 47,
+      "win_rate": 0.3088235294117647,
+      "median_paired_diff": 0.0005868820990125867,
+      "mean_paired_diff": 0.2023679762356921,
+      "wilcoxon_p_two_sided": 2.9761733617289225e-06,
+      "median_abs_diff_when_fitted_wins": 0.0005868814839203873,
+      "median_abs_diff_when_fitted_loses": 0.0005868820990125867,
+      "ratio_ci95_cluster": {
+        "n_clusters": 68,
+        "n_boot": 3919,
+        "point": 1.0274284160931106,
+        "ci95": [
+          0.7397724940471304,
+          2.0288982244184064
+        ]
+      },
+      "rate": 0.1
+    },
+    "0.2": {
+      "n": 69,
+      "median_fitted": 0.032000190803712636,
+      "median_sb": 0.05070723930479759,
+      "median_ratio": 0.6310773617818508,
+      "wins": 23,
+      "ties": 0,
+      "losses": 46,
+      "win_rate": 0.3333333333333333,
+      "median_paired_diff": 0.00025802901556226665,
+      "mean_paired_diff": 0.06497190792529194,
+      "wilcoxon_p_two_sided": 0.0074271179228632515,
+      "median_abs_diff_when_fitted_wins": 0.026613359823478788,
+      "median_abs_diff_when_fitted_loses": 0.0002580290156177778,
+      "ratio_ci95_cluster": {
+        "n_clusters": 69,
+        "n_boot": 3874,
+        "point": 0.6310773617818508,
+        "ci95": [
+          0.35815229123956943,
+          1.3031282438445553
+        ]
+      },
+      "rate": 0.2
+    },
+    "0.3": {
+      "n": 69,
+      "median_fitted": 0.02139868751635776,
+      "median_sb": 0.046551534263367,
+      "median_ratio": 0.4596773845367568,
+      "wins": 26,
+      "ties": 0,
+      "losses": 43,
+      "win_rate": 0.37681159420289856,
+      "median_paired_diff": 0.0002312643987341101,
+      "mean_paired_diff": 0.016134288310855522,
+      "wilcoxon_p_two_sided": 0.26952604898776134,
+      "median_abs_diff_when_fitted_wins": 0.04504403590436873,
+      "median_abs_diff_when_fitted_loses": 0.00023126439884646466,
+      "ratio_ci95_cluster": {
+        "n_clusters": 69,
+        "n_boot": 3873,
+        "point": 0.4596773845367568,
+        "ci95": [
+          0.18837809489003257,
+          0.7170270359582602
+        ]
+      },
+      "rate": 0.3
+    },
+    "0.5": {
+      "n": 69,
+      "median_fitted": 0.012641624831792764,
+      "median_sb": 0.037874490598827415,
+      "median_ratio": 0.33377676192915307,
+      "wins": 31,
+      "ties": 0,
+      "losses": 38,
+      "win_rate": 0.4492753623188406,
+      "median_paired_diff": 9.984035872212527e-05,
+      "mean_paired_diff": -0.023599114832281096,
+      "wilcoxon_p_two_sided": 0.02605547692468948,
+      "median_abs_diff_when_fitted_wins": 0.04697456711242509,
+      "median_abs_diff_when_fitted_loses": 9.984035877896869e-05,
+      "ratio_ci95_cluster": {
+        "n_clusters": 69,
+        "n_boot": 3881,
+        "point": 0.33377676192915307,
+        "ci95": [
+          0.15468434774705825,
+          0.6320989997731442
+        ]
+      },
+      "rate": 0.5
+    }
+  },
+  "full_scored": {
+    "n": 275,
+    "median_fitted": 0.025250310672543907,
+    "median_sb": 0.044778634681253204,
+    "median_ratio": 0.5638919286459414,
+    "wins": 101,
+    "ties": 0,
+    "losses": 174,
+    "win_rate": 0.36727272727272725,
+    "median_paired_diff": 0.0002312643987341101,
+    "mean_paired_diff": 0.06446913091234123,
+    "wilcoxon_p_two_sided": 0.035872336438556814,
+    "median_abs_diff_when_fitted_wins": 0.034937468679117956,
+    "median_abs_diff_when_fitted_loses": 0.0005868820990125867,
+    "ratio_ci95_cluster": {
+      "n_clusters": 69,
+      "n_boot": 3875,
+      "point": 0.5638919286459414,
+      "ci95": [
+        0.29394827597600476,
+        0.8417253275660745
+      ]
+    }
+  },
+  "selectable_regime_p_ge_0_2": {
+    "n": 207,
+    "median_fitted": 0.02139868751635776,
+    "median_sb": 0.044778634681253204,
+    "median_ratio": 0.47787717666426366,
+    "wins": 80,
+    "ties": 0,
+    "losses": 127,
+    "win_rate": 0.3864734299516908,
+    "median_paired_diff": 9.984035877896869e-05,
+    "mean_paired_diff": 0.01916902713462211,
+    "wilcoxon_p_two_sided": 0.6499687147461368,
+    "median_abs_diff_when_fitted_wins": 0.04504403590436873,
+    "median_abs_diff_when_fitted_loses": 0.00025802901550542323,
+    "ratio_ci95_cluster": {
+      "n_clusters": 69,
+      "n_boot": 3879,
+      "point": 0.47787717666426366,
+      "ci95": [
+        0.23419473435640395,
+        0.7412147975720784
+      ]
+    }
+  },
+  "low_rate_regime_p_0_1": {
+    "n": 68,
+    "median_fitted": 0.04801856742213767,
+    "median_sb": 0.04673665500194418,
+    "median_ratio": 1.0274284160931106,
+    "wins": 21,
+    "ties": 0,
+    "losses": 47,
+    "win_rate": 0.3088235294117647,
+    "median_paired_diff": 0.0005868820990125867,
+    "mean_paired_diff": 0.2023679762356921,
+    "wilcoxon_p_two_sided": 2.9761733617289225e-06,
+    "median_abs_diff_when_fitted_wins": 0.0005868814839203873,
+    "median_abs_diff_when_fitted_loses": 0.0005868820990125867,
+    "ratio_ci95_cluster": {
+      "n_clusters": 68,
+      "n_boot": 3920,
+      "point": 1.0274284160931106,
+      "ci95": [
+        0.7464509211586812,
+        1.9659505679246208
+      ]
+    }
+  },
+  "selectable_regime_p_ge_0_3": {
+    "n": 138,
+    "median_fitted": 0.014782699368642571,
+    "median_sb": 0.040875762057678455,
+    "median_ratio": 0.3616495112135937,
+    "wins": 57,
+    "ties": 0,
+    "losses": 81,
+    "win_rate": 0.41304347826086957,
+    "median_paired_diff": 9.984035872212527e-05,
+    "mean_paired_diff": -0.0037324132607127886,
+    "wilcoxon_p_two_sided": 0.3522943890984849,
+    "median_abs_diff_when_fitted_wins": 0.04520591378643435,
+    "median_abs_diff_when_fitted_loses": 0.0002312643987909535,
+    "ratio_ci95_cluster": {
+      "n_clusters": 69,
+      "n_boot": 3855,
+      "point": 0.3616495112135937,
+      "ci95": [
+        0.20038621884952204,
+        0.6424956083104679
+      ]
+    }
+  },
+  "held_out_attribute_halves": {
+    "A": {
+      "n": 90,
+      "n_attributes": 30,
+      "median_fitted": 0.020930992350779942,
+      "median_sb": 0.03943661971830981,
+      "median_ratio": 0.5307501631804921,
+      "wins": 37,
+      "ties": 0,
+      "losses": 53,
+      "win_rate": 0.4111111111111111,
+      "median_paired_diff": 9.984035877896869e-05,
+      "mean_paired_diff": 0.01597766120000758,
+      "wilcoxon_p_two_sided": 0.9023152338440741,
+      "median_abs_diff_when_fitted_wins": 0.040281675916226,
+      "median_abs_diff_when_fitted_loses": 0.00025802901550542323,
+      "ratio_ci95_cluster": {
+        "n_clusters": 30,
+        "n_boot": 3820,
+        "point": 0.5307501631804921,
+        "ci95": [
+          0.22976174679293512,
+          0.9852170304936898
+        ]
+      }
+    },
+    "B": {
+      "n": 117,
+      "n_attributes": 39,
+      "median_fitted": 0.021941504383927835,
+      "median_sb": 0.046574252290844,
+      "median_ratio": 0.4711080329730017,
+      "wins": 43,
+      "ties": 0,
+      "losses": 74,
+      "win_rate": 0.36752136752136755,
+      "median_paired_diff": 9.984035877896869e-05,
+      "mean_paired_diff": 0.021623924007402512,
+      "wilcoxon_p_two_sided": 0.6147629843310849,
+      "median_abs_diff_when_fitted_wins": 0.050118292290678546,
+      "median_abs_diff_when_fitted_loses": 0.00025802901553384494,
+      "ratio_ci95_cluster": {
+        "n_clusters": 39,
+        "n_boot": 3525,
+        "point": 0.4711080329730017,
+        "ci95": [
+          0.1489062762019351,
+          0.9106859645346381
+        ]
+      }
+    }
+  },
+  "selectable_by_dataset": {
+    "Airlines": {
+      "n": 27,
+      "median_fitted": 0.037726291069274054,
+      "median_sb": 0.03943661971830981,
+      "median_ratio": 0.9566309521137362,
+      "win_rate": 0.5555555555555556
+    },
+    "NCVoter": {
+      "n": 165,
+      "median_fitted": 0.012753013621864762,
+      "median_sb": 0.037874490598827415,
+      "median_ratio": 0.33671775963792344,
+      "win_rate": 0.3575757575757576
+    },
+    "kasandr": {
+      "n": 15,
+      "median_fitted": 8.05921048137609,
+      "median_sb": 7.7966844204104735,
+      "median_ratio": 1.0336715001928722,
+      "win_rate": 0.4
+    }
+  },
+  "leave_one_dataset_out": {
+    "none": {
+      "n": 207,
+      "median_ratio": 0.47787717666426366,
+      "win_rate": 0.3864734299516908
+    },
+    "Airlines": {
+      "n": 180,
+      "median_ratio": 0.40516849975426655,
+      "win_rate": 0.3611111111111111
+    },
+    "NCVoter": {
+      "n": 42,
+      "median_ratio": 0.5315908149817657,
+      "win_rate": 0.5
+    },
+    "kasandr": {
+      "n": 192,
+      "median_ratio": 0.4809074521902322,
+      "win_rate": 0.3854166666666667
+    }
+  },
+  "concentration_caveat": "The aggregate gain is strongest on NCVoter, which supplies 165 of the 207 cases in the selectable regime.  Viewed separately, Airlines and kasandr have ratios near one.  The leave-one-dataset-out ratios stay below one, but a per-dataset gain is not established.",
+  "complete_strategies": {
+    "fitted_full_posterior": {
+      "n": 275,
+      "median": 0.025250310672543907,
+      "p75": 0.5675027033566536,
+      "p90": 15.949562840341073,
+      "mean": 11.360116091230305,
+      "fraction_w1_above_tail": 0.3054545454545455,
+      "n_above_tail": 84
+    },
+    "sb_linear": {
+      "n": 275,
+      "median": 0.044778634681253204,
+      "p75": 0.3945481892131948,
+      "p90": 15.786062206157542,
+      "mean": 11.295646960317965,
+      "fraction_w1_above_tail": 0.36363636363636365,
+      "n_above_tail": 100
+    },
+    "good_turing": {
+      "n": 269,
+      "median": 0.05188679245283012,
+      "p75": 1.370526785676991,
+      "p90": 15.611111111111088,
+      "mean": 7.3054254630479445,
+      "fraction_w1_above_tail": 0.38661710037174724,
+      "n_above_tail": 104
+    },
+    "npmle": {
+      "n": 275,
+      "median": 0.6450736877190643,
+      "p75": 2.4882140978668126,
+      "p90": 24.210137750959145,
+      "mean": 11.911260079308333,
+      "fraction_w1_above_tail": 0.6763636363636364,
+      "n_above_tail": 186
+    },
+    "naive_1_over_p": {
+      "n": 275,
+      "median": 4.0,
+      "p75": 9.028913974296184,
+      "p90": 48.54700532091825,
+      "mean": 20.290459413291128,
+      "fraction_w1_above_tail": 1.0,
+      "n_above_tail": 275
+    },
+    "oracle_prior_ceiling": {
+      "n": 275,
+      "median": 0.0013348000684095807,
+      "p75": 0.06538258017366572,
+      "p90": 15.760121235963288,
+      "mean": 10.45829807132785,
+      "fraction_w1_above_tail": 0.24727272727272728,
+      "n_above_tail": 68
+    }
+  },
+  "readout_ablation_same_cases": {
+    "n": 275,
+    "median_w1_B1": 0.044778634681253204,
+    "median_w1_B4": 0.025250310672543907,
+    "median_ratio_B4_over_B1": 0.5638919286459414
+  }
+}

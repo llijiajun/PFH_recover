@@ -1,0 +1,289 @@
+{
+  "n_cases": 276,
+  "n_clean": 208,
+  "n_support_truncated": 68,
+  "primary": {
+    "truth": "self_join_true_uncapped",
+    "n_cases": 208,
+    "arms": {
+      "catalog_uniform_true": {
+        "n_finite": 208,
+        "q_geomean": 1.0912385930246054,
+        "q_median": 1.0,
+        "q_p90": 1.3709215260160839,
+        "q_max": 3.3854311324327737,
+        "within_2x": 0.9807692307692307
+      },
+      "catalog_uniform_naive": {
+        "n_finite": 207,
+        "q_geomean": 1.3018444731105008,
+        "q_median": 1.1923076923076923,
+        "q_p90": 1.938966255144033,
+        "q_max": 5.8,
+        "within_2x": 0.927536231884058
+      },
+      "raw_sample": {
+        "n_finite": 207,
+        "q_geomean": 3.5899291096285557,
+        "q_median": 3.193548387096774,
+        "q_p90": 9.806451612903228,
+        "q_max": 20.833333333333332,
+        "within_2x": 0.20772946859903382
+      },
+      "good_turing": {
+        "n_finite": 201,
+        "q_geomean": 3.5983884545894917,
+        "q_median": 3.3801923076923077,
+        "q_p90": 13.0,
+        "q_max": 44.0,
+        "within_2x": 0.29850746268656714
+      },
+      "sb_linear": {
+        "n_finite": 207,
+        "q_geomean": 1.331603945491989,
+        "q_median": 1.2114825596776908,
+        "q_p90": 1.934658503315158,
+        "q_max": 5.80309422769183,
+        "within_2x": 0.9082125603864735
+      },
+      "ours_fitted": {
+        "n_finite": 207,
+        "q_geomean": 1.243698052584328,
+        "q_median": 1.1313153874322825,
+        "q_p90": 1.679680008194903,
+        "q_max": 5.7928904720629,
+        "within_2x": 0.927536231884058
+      },
+      "ours_oracle": {
+        "n_finite": 207,
+        "q_geomean": 1.1948511593578854,
+        "q_median": 1.0958904109589038,
+        "q_p90": 1.5977972785337407,
+        "q_max": 5.799999999999999,
+        "within_2x": 0.9420289855072463
+      }
+    },
+    "paired": {
+      "ours_fitted_vs_catalog_uniform_true": {
+        "n": 207,
+        "win_rate": 0.2608695652173913,
+        "wilcoxon_p_less": 0.999999999985351
+      },
+      "ours_fitted_vs_catalog_uniform_naive": {
+        "n": 207,
+        "win_rate": 0.6231884057971014,
+        "wilcoxon_p_less": 6.291621257969152e-08
+      },
+      "ours_fitted_vs_raw_sample": {
+        "n": 207,
+        "win_rate": 0.9420289855072463,
+        "wilcoxon_p_less": 8.64345993432197e-32
+      },
+      "ours_fitted_vs_good_turing": {
+        "n": 201,
+        "win_rate": 0.8905472636815921,
+        "wilcoxon_p_less": 8.60981806861086e-31
+      },
+      "ours_fitted_vs_sb_linear": {
+        "n": 207,
+        "win_rate": 0.6473429951690821,
+        "wilcoxon_p_less": 1.0297090114197629e-10
+      },
+      "ours_fitted_vs_ours_oracle": {
+        "n": 207,
+        "win_rate": 0.3864734299516908,
+        "wilcoxon_p_less": 0.9999880197327895
+      }
+    }
+  },
+  "sensitivity": {
+    "uncapped_all": {
+      "truth": "self_join_true_uncapped",
+      "n_cases": 276,
+      "arms": {
+        "catalog_uniform_true": {
+          "n_finite": 276,
+          "q_geomean": 3.195660725494864,
+          "q_median": 1.0513628849332974,
+          "q_p90": 160.41397486465794,
+          "q_max": 806.6468602059774,
+          "within_2x": 0.7391304347826086
+        },
+        "catalog_uniform_naive": {
+          "n_finite": 275,
+          "q_geomean": 4.5550178601241536,
+          "q_median": 1.2903225806451613,
+          "q_p90": 266.31557385519625,
+          "q_max": 2415.951282494783,
+          "within_2x": 0.6981818181818182
+        },
+        "raw_sample": {
+          "n_finite": 275,
+          "q_geomean": 21.92087920659685,
+          "q_median": 4.2517006802721085,
+          "q_p90": 19280.628850641828,
+          "q_max": 17238063.08807391,
+          "within_2x": 0.1709090909090909
+        },
+        "good_turing": {
+          "n_finite": 269,
+          "q_geomean": 57.99445085293216,
+          "q_median": 5.0,
+          "q_p90": 203512.19932524321,
+          "q_max": 9895195028859.0,
+          "within_2x": 0.22676579925650558
+        },
+        "sb_linear": {
+          "n_finite": 275,
+          "q_geomean": 10.921762826078048,
+          "q_median": 1.3366389493957496,
+          "q_p90": 24035.235792100993,
+          "q_max": 17329039.9299861,
+          "within_2x": 0.6836363636363636
+        },
+        "ours_fitted": {
+          "n_finite": 275,
+          "q_geomean": 10.349250625019955,
+          "q_median": 1.221008958085835,
+          "q_p90": 23954.627489610048,
+          "q_max": 17200525.684702646,
+          "within_2x": 0.6981818181818182
+        },
+        "ours_oracle": {
+          "n_finite": 275,
+          "q_geomean": 9.6023775634543,
+          "q_median": 1.178082191780822,
+          "q_p90": 19414.370051613103,
+          "q_max": 16971346.203086775,
+          "within_2x": 0.7236363636363636
+        }
+      },
+      "paired": {
+        "ours_fitted_vs_catalog_uniform_true": {
+          "n": 275,
+          "win_rate": 0.2545454545454545,
+          "wilcoxon_p_less": 0.9999999999999988
+        },
+        "ours_fitted_vs_catalog_uniform_naive": {
+          "n": 275,
+          "win_rate": 0.5309090909090909,
+          "wilcoxon_p_less": 0.4788547121764329
+        },
+        "ours_fitted_vs_raw_sample": {
+          "n": 275,
+          "win_rate": 0.730909090909091,
+          "wilcoxon_p_less": 1.1482405510030238e-05
+        },
+        "ours_fitted_vs_good_turing": {
+          "n": 269,
+          "win_rate": 0.8698884758364313,
+          "wilcoxon_p_less": 1.1974771691486031e-30
+        },
+        "ours_fitted_vs_sb_linear": {
+          "n": 275,
+          "win_rate": 0.7018181818181818,
+          "wilcoxon_p_less": 2.6162757706017833e-19
+        },
+        "ours_fitted_vs_ours_oracle": {
+          "n": 275,
+          "win_rate": 0.3054545454545455,
+          "wilcoxon_p_less": 0.9999999999999999
+        }
+      }
+    },
+    "capped_all_common_support": {
+      "truth": "self_join_true_capped",
+      "n_cases": 276,
+      "arms": {
+        "catalog_uniform_true": {
+          "n_finite": 276,
+          "q_geomean": 5.051576300834239,
+          "q_median": 1.0513628849332974,
+          "q_p90": 145.15669161669223,
+          "q_max": 22285539.850567404,
+          "within_2x": 0.7536231884057971
+        },
+        "catalog_uniform_naive": {
+          "n_finite": 275,
+          "q_geomean": 4.83484903602944,
+          "q_median": 1.2903225806451613,
+          "q_p90": 102.48351088309347,
+          "q_max": 4476978.691616221,
+          "within_2x": 0.72
+        },
+        "raw_sample": {
+          "n_finite": 275,
+          "q_geomean": 3.9711417349096068,
+          "q_median": 3.5179794072827724,
+          "q_p90": 11.399999999999995,
+          "q_max": 29.26293201082486,
+          "within_2x": 0.1709090909090909
+        },
+        "good_turing": {
+          "n_finite": 269,
+          "q_geomean": 5.833917273977136,
+          "q_median": 4.06,
+          "q_p90": 30.054570608086927,
+          "q_max": 83881.0,
+          "within_2x": 0.2527881040892193
+        },
+        "sb_linear": {
+          "n_finite": 275,
+          "q_geomean": 1.8107819486485155,
+          "q_median": 1.3330961975867097,
+          "q_p90": 4.503626234122775,
+          "q_max": 29.262942011647702,
+          "within_2x": 0.7090909090909091
+        },
+        "ours_fitted": {
+          "n_finite": 275,
+          "q_geomean": 1.7213465221586841,
+          "q_median": 1.2135911992420318,
+          "q_p90": 4.445823341775532,
+          "q_max": 29.256492180310342,
+          "within_2x": 0.7272727272727273
+        },
+        "ours_oracle": {
+          "n_finite": 275,
+          "q_geomean": 1.7303360419163063,
+          "q_median": 1.182795698924731,
+          "q_p90": 4.6207138184267835,
+          "q_max": 29.16995443185814,
+          "within_2x": 0.7236363636363636
+        }
+      },
+      "paired": {
+        "ours_fitted_vs_catalog_uniform_true": {
+          "n": 275,
+          "win_rate": 0.41454545454545455,
+          "wilcoxon_p_less": 0.2922071618142773
+        },
+        "ours_fitted_vs_catalog_uniform_naive": {
+          "n": 275,
+          "win_rate": 0.6836363636363636,
+          "wilcoxon_p_less": 5.967037041181526e-17
+        },
+        "ours_fitted_vs_raw_sample": {
+          "n": 275,
+          "win_rate": 0.9345454545454546,
+          "wilcoxon_p_less": 4.134397914166527e-41
+        },
+        "ours_fitted_vs_good_turing": {
+          "n": 269,
+          "win_rate": 0.8513011152416357,
+          "wilcoxon_p_less": 2.438158314427049e-34
+        },
+        "ours_fitted_vs_sb_linear": {
+          "n": 275,
+          "win_rate": 0.5309090909090909,
+          "wilcoxon_p_less": 0.0038575602012314563
+        },
+        "ours_fitted_vs_ours_oracle": {
+          "n": 275,
+          "win_rate": 0.5236363636363637,
+          "wilcoxon_p_less": 0.03858441695196949
+        }
+      }
+    }
+  }
+}
