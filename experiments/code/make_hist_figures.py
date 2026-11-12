@@ -1,7 +1,7 @@
-"""Regenerate fig_baselines.pdf and fig_modern.pdf with histogram-only panels.
+"""Draw spectrum-only diagnostic panels from the archived per-case metrics.
 
-No NDV anywhere: every panel is a property of the recovered spectrum.
-Run:  python3 make_hist_figures.py
+Every panel is a property of the recovered histogram. Output goes to
+experiments/results/figures/. Run from any directory.
 """
 import csv
 import os

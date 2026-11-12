@@ -8,7 +8,7 @@ import os
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 SRC = os.path.join(
-    ROOT, "results", "thickening-main-spectrum-recovery-vs-classical",
+    ROOT, "experiments", "results", "archived_inputs",
     "unknown_support.json",
 )
 OUT = os.path.join(ROOT, "experiments", "results", "tables", "tab_unknown_support.tex")
@@ -43,7 +43,7 @@ def main():
     lines = [
         r"\begin{table*}[t]",
         r"\centering",
-        r"\caption{Unknown-support and prior-misspecification grid (review item 5.2). "
+        r"\caption{Unknown-support and prior-misspecification grid. "
         r"Five population families, three seeds each, medians over seeds. "
         r"Matched uses the true family predictive as an information ceiling, fitted uses the "
         r"two-equation empirical-Bayes fit from the sample alone, and misspecified fits on a "

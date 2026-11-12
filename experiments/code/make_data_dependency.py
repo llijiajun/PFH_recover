@@ -19,7 +19,7 @@ fitted estimator away from truth.
 Outputs:
   experiments/results/data_dependency/summary.json
   experiments/results/tables/tab_data_dependency.tex
-  experiments/code/figures/fig_data_dependency.pdf / .png / .svg
+  experiments/results/figures/fig_data_dependency.{pdf,png,svg}
 """
 from __future__ import annotations
 
@@ -33,7 +33,6 @@ from scipy.special import gammaln
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 sys.path.insert(0, str(HERE))
-sys.path.insert(0, str(ROOT / "paper" / "figures"))
 
 from d4d_logic import (  # noqa: E402
     zipf_population, w1_distance, analytic_posterior, fofo_spectrum, thin,
@@ -48,7 +47,7 @@ SEEDS = [0, 1, 2]
 
 OUT_JSON = ROOT / "experiments" / "results" / "data_dependency" / "summary.json"
 OUT_TEX = ROOT / "experiments" / "results" / "tables" / "tab_data_dependency.tex"
-OUT_FIG = HERE / "figures" / "fig_data_dependency"
+OUT_FIG = ROOT / "experiments" / "results" / "figures" / "fig_data_dependency"
 
 
 # --------------------------------------------------------------------------- #
@@ -240,6 +239,7 @@ def emit_figure(agg):
     ax2.set_title("(b) prior shape is identified only for some families", fontsize=9.5, fontweight="bold")
     ax2.legend(loc="upper right", fontsize=7.6, frameon=True, framealpha=0.9, ncol=1)
     fig.tight_layout(pad=0.4, w_pad=1.2)
+    OUT_FIG.parent.mkdir(parents=True, exist_ok=True)
     for ext in ("pdf", "png", "svg"):
         fig.savefig(str(OUT_FIG) + "." + ext, bbox_inches="tight", pad_inches=0.02)
     plt.close(fig)

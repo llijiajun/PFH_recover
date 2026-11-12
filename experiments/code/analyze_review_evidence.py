@@ -31,7 +31,7 @@ RES = ROOT / "experiments" / "results"
 MODERN = RES / "modern_baselines" / "modern_metrics.csv"
 FITTED = RES / "fitted_prior_validation" / "fitted_metrics.csv"
 W1_TESTS = RES / "baseline_validation" / "w1_tests.json"
-INTERVALS = ROOT / "results" / "thickening-plausible-set-validation" / "intervals_three_layer.json"
+INTERVALS = RES / "archived_inputs" / "intervals_three_layer.json"
 RUNTIME = RES / "runtime_benchmark" / "summary.json"
 BOUND = 1e-3
 TOL = 1.001e-3
@@ -383,7 +383,9 @@ def deployable_regime():
         T.append(f"{name} & {len(rs)} & " + " & ".join(
             "---" if e[x] is None else f"{e[x]:.3g}" for x in est) + r" \\")
     T += [r"\bottomrule", r"\end{tabular}", r"\end{table}"]
-    (ROOT / "paper" / "tables" / "tab_output_policy.tex").write_text("\n".join(T) + "\n")
+    out_tables = RES / "tables"
+    out_tables.mkdir(parents=True, exist_ok=True)
+    (out_tables / "tab_output_policy.tex").write_text("\n".join(T) + "\n")
     return payload
 
 
@@ -533,7 +535,8 @@ def readout_regime():
     return payload
 
 
-TABLE_DIR = ROOT / "paper" / "tables"
+TABLE_DIR = RES / "tables"
+TABLE_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def tex_p(p):

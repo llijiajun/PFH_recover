@@ -1,0 +1,167 @@
+{
+ "seed0": {
+  "seed": 0,
+  "a0": 0.001000000001112917,
+  "b0": 0.0748180361989971,
+  "L1_model_content_95": 0.9531632234613475,
+  "L2_per_type_95": {
+   "g1": {
+    "cov": 0.992822966507177,
+    "n": 418
+   },
+   "g2": {
+    "cov": 0.9701492537313433,
+    "n": 67
+   },
+   "g3p": {
+    "cov": 0.738562091503268,
+    "n": 153
+   }
+  },
+  "K": {
+   "120": {
+    "per_freq_cov_90": 0.9290540540540541,
+    "per_freq_cov_50": 0.8040540540540541,
+    "simultaneous_raw_90": 0.0,
+    "simultaneous_bonferroni_90": 0.0,
+    "median_band_width": 1.0,
+    "n_bins": 296
+   },
+   "500": {
+    "per_freq_cov_90": 0.927797833935018,
+    "per_freq_cov_50": 0.7906137184115524,
+    "simultaneous_raw_90": 0.0,
+    "simultaneous_bonferroni_90": 0.0,
+    "median_band_width": 1.0,
+    "n_bins": 277,
+    "rel_width_shift_vs_prev": 0.06345029415428914,
+    "cov_shift_vs_prev": 0.0012562201190360334
+   },
+   "2000": {
+    "per_freq_cov_90": 0.9354838709677419,
+    "per_freq_cov_50": 0.7921146953405018,
+    "simultaneous_raw_90": 0.0,
+    "simultaneous_bonferroni_90": 0.0,
+    "median_band_width": 1.0,
+    "n_bins": 279,
+    "rel_width_shift_vs_prev": 0.022468072832008502,
+    "cov_shift_vs_prev": 0.007686037032723858
+   }
+  },
+  "L3_predictive": {
+   "rethin_w1_median": 2.2299221809047616,
+   "floor_w1_median": 0.47592648544623645,
+   "note": "re-thinned draw vs observation against two independent thinnings of the truth"
+  }
+ },
+ "seed1": {
+  "seed": 1,
+  "a0": 0.0010000000003739739,
+  "b0": 0.06968835314744282,
+  "L1_model_content_95": 0.9535124004801082,
+  "L2_per_type_95": {
+   "g1": {
+    "cov": 0.9727047146401985,
+    "n": 403
+   },
+   "g2": {
+    "cov": 0.9487179487179487,
+    "n": 78
+   },
+   "g3p": {
+    "cov": 0.5785714285714286,
+    "n": 140
+   }
+  },
+  "K": {
+   "120": {
+    "per_freq_cov_90": 0.9359430604982206,
+    "per_freq_cov_50": 0.7864768683274022,
+    "simultaneous_raw_90": 0.0,
+    "simultaneous_bonferroni_90": 0.0,
+    "median_band_width": 1.0,
+    "n_bins": 281
+   },
+   "500": {
+    "per_freq_cov_90": 0.9267241379310345,
+    "per_freq_cov_50": 0.75,
+    "simultaneous_raw_90": 0.0,
+    "simultaneous_bonferroni_90": 0.0,
+    "median_band_width": 1.0,
+    "n_bins": 232,
+    "rel_width_shift_vs_prev": 0.07907818527614675,
+    "cov_shift_vs_prev": 0.00921892256718615
+   },
+   "2000": {
+    "per_freq_cov_90": 0.9234234234234234,
+    "per_freq_cov_50": 0.7342342342342343,
+    "simultaneous_raw_90": 0.0,
+    "simultaneous_bonferroni_90": 0.0,
+    "median_band_width": 1.0,
+    "n_bins": 222,
+    "rel_width_shift_vs_prev": 0.021469115541174612,
+    "cov_shift_vs_prev": 0.0033007145076110467
+   }
+  },
+  "L3_predictive": {
+   "rethin_w1_median": 2.2830295804240706,
+   "floor_w1_median": 0.5325657192582302,
+   "note": "re-thinned draw vs observation against two independent thinnings of the truth"
+  }
+ },
+ "seed2": {
+  "seed": 2,
+  "a0": 0.0010000000001401006,
+  "b0": 0.06702439018539218,
+  "L1_model_content_95": 0.9529607988133534,
+  "L2_per_type_95": {
+   "g1": {
+    "cov": 0.9742268041237113,
+    "n": 388
+   },
+   "g2": {
+    "cov": 0.9315068493150684,
+    "n": 73
+   },
+   "g3p": {
+    "cov": 0.6573426573426573,
+    "n": 143
+   }
+  },
+  "K": {
+   "120": {
+    "per_freq_cov_90": 0.9125874125874126,
+    "per_freq_cov_50": 0.8041958041958042,
+    "simultaneous_raw_90": 0.0,
+    "simultaneous_bonferroni_90": 0.0,
+    "median_band_width": 1.0,
+    "n_bins": 286
+   },
+   "500": {
+    "per_freq_cov_90": 0.9190140845070423,
+    "per_freq_cov_50": 0.8063380281690141,
+    "simultaneous_raw_90": 0.0,
+    "simultaneous_bonferroni_90": 0.0,
+    "median_band_width": 1.0,
+    "n_bins": 284,
+    "rel_width_shift_vs_prev": 0.059493525157798086,
+    "cov_shift_vs_prev": 0.006426671919629645
+   },
+   "2000": {
+    "per_freq_cov_90": 0.9290780141843972,
+    "per_freq_cov_50": 0.8120567375886525,
+    "simultaneous_raw_90": 0.0,
+    "simultaneous_bonferroni_90": 0.0,
+    "median_band_width": 1.0,
+    "n_bins": 282,
+    "rel_width_shift_vs_prev": 0.017299809121168935,
+    "cov_shift_vs_prev": 0.010063929677354921
+   }
+  },
+  "L3_predictive": {
+   "rethin_w1_median": 2.2936244056706236,
+   "floor_w1_median": 0.46786866256422904,
+   "note": "re-thinned draw vs observation against two independent thinnings of the truth"
+  }
+ }
+}

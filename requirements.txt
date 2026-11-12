@@ -2,6 +2,6 @@ numpy>=1.24
 scipy>=1.10
 matplotlib>=3.7
 
-# Optional. Only the learned-endpoint refinement and the walkthrough
-# notebook cells that exercise it need PyTorch.
-# torch>=2.0
+# Only needed to open reproduce_all.ipynb. All experiment scripts run
+# with the three packages above. No PyTorch or GPU is required.
+jupyter>=1.0

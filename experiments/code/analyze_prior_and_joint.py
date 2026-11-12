@@ -23,8 +23,9 @@ import statistics
 import collections
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-A0_JSON = os.path.join(ROOT, "results", "thickening-necessity-multistep-vs-singlestep", "a0_selection.json")
-ROOT_JSON = os.path.join(ROOT, "results", "thickening-necessity-multistep-vs-singlestep", "prior_rootcause.json")
+INPUTS = os.path.join(ROOT, "experiments", "results", "archived_inputs")
+A0_JSON = os.path.join(INPUTS, "a0_selection.json")
+ROOT_JSON = os.path.join(INPUTS, "prior_rootcause.json")
 JOINT_CSV = os.path.join(ROOT, "experiments", "results", "joint_recovery", "joint_metrics.csv")
 OUT_DIR = os.path.join(ROOT, "experiments", "results", "prior_and_joint_diagnosis")
 TEX_DIR = os.path.join(ROOT, "experiments", "results", "tables")

@@ -23,8 +23,8 @@ invisible, which was the second defect of the earlier figure.
 Outputs are vector first.  PDF, EPS and SVG are the deliverables and PNG is a
 preview only.
 
-  experiments/code/figures/fof_recovery_comparison.{pdf,eps,svg,png}
-  experiments/code/figures/fof_recovery_deviation.{pdf,eps,svg,png}
+  experiments/results/figures/fof_recovery_comparison.{pdf,eps,svg,png}
+  experiments/results/figures/fof_recovery_deviation.{pdf,eps,svg,png}
   experiments/results/fof_recovery_figure/{summary.json,report.md}
 
 Run from anywhere with the py311 interpreter.  No torch needed.
@@ -54,7 +54,7 @@ from d4d_baselines import (spectrum_naive, spectrum_good_turing,
 from d4d_modern_baselines import smooth_bayes_params, spectrum_smooth_bayes
 from eb_prior import fitted_prior_eb
 
-FIG_DIR = HERE / "figures"
+FIG_DIR = ROOT / "experiments" / "results" / "figures"
 RES_DIR = ROOT / "experiments" / "results" / "fof_recovery_figure"
 
 CASES = [
@@ -120,7 +120,7 @@ VECTOR_RC = {
 
 
 def save_vector(fig, out_base: Path):
-    """PDF, EPS and SVG are the deliverables.  PNG is a preview only."""
+    """Write vector files and a PNG preview for local inspection."""
     for ext in ("pdf", "eps", "svg"):
         fig.savefig(out_base.with_suffix("." + ext),
                     bbox_inches="tight", pad_inches=0.02)

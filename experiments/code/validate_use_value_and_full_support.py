@@ -41,7 +41,7 @@ from validate_baselines import DATASETS, P_VALUES, stable_seed  # noqa: E402
 from validate_real_data import load_attribute  # noqa: E402
 
 REC = ROOT / "experiments" / "results" / "readout_2x2" / "metrics.csv"
-OUT = ROOT / "results" / "modern_baselines"
+OUT = ROOT / "experiments" / "results" / "modern_baselines"
 OUT.mkdir(parents=True, exist_ok=True)
 J = 512
 BOUND = 0.0011
@@ -143,9 +143,16 @@ def main():
             n_cap = int(max(2 * n / p, 4 * int(g.max()) / p)) + 1000
             from eb_prior import fitted_prior_eb
             import math
-            pf_eb, _, a0, b0 = fitted_prior_eb(g, p, n_cap)
-            lf = np.concatenate([[0.0], np.cumsum(np.log(np.arange(1, n_cap + 3)))])
-            spec_fit = B.spectrum_ours(g, p, pf_eb, lf, n_cap, d_obs)
+            try:
+                pf_eb, _, a0, b0 = fitted_prior_eb(g, p, n_cap)
+                lf = np.concatenate([[0.0], np.cumsum(np.log(np.arange(1, n_cap + 3)))])
+                spec_fit = B.spectrum_ours(g, p, pf_eb, lf, n_cap, d_obs)
+            except (ValueError, FloatingPointError, np.linalg.LinAlgError):
+                # A few aggregated columns make the least-squares prior fit
+                # undefined. Skip those cases instead of aborting the whole grid.
+                continue
+            if not np.all(np.isfinite(spec_fit)):
+                continue
             # full-support truth
             F_full = D.fofo_spectrum(f_true)
             Ft = np.asarray(F_full, dtype=float)
